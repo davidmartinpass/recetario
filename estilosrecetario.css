@@ -3,63 +3,70 @@
     font-family: Lora, Georgia;
     box-sizing: content-box;
     text-align: center;
-    
 }
 
 body {
-    background-color: rgba(201, 227, 179, 89);
+    background-color: rgba(0, 0, 0, 0.925);
+	margin: 0;
+	padding: 0;
 }
 
 header {
 
     display: grid;
-    grid-template: 100px / 93% 7%;
+	color: #f1f1f1;
+    grid-template: 100px / 89% 7% 4%;																					/*Estructura grid de fila de 100px y dos columnas (93% - 7%*/
     justify-content: center;
     align-items: center;
 }
 
 nav {
 
-    height: 250px; /* Specify a height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    right: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    height: 250px;
+    width: 0; 																										/* 0 width - change this with JavaScript */
+    position: fixed; 																								/* Stay in place */
+    z-index: 1; 																									/* Stay on top */
+    top: 0;																											/*Posición fija arriba del todo*/
+    right: 0;																										/*Posición fija a la derecha del todo*/
+    background-color: #111;
+    overflow-x: hidden; 																							/* Disable horizontal scroll */
+    padding-top: 20px; 																								/* Place content 60px from the top */
+    transition: 0.5s; 																							/* 0.5 second transition effect cuando cambie de estado */
 }
 
 .nav-link {
 
-    padding: 8px 8px 8px 32px;
+    padding: 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
-    transition: 0.3s;
+    transition: 0.3s;																								/* 0.3 second transition effect, de arriba a abajo */
 }
 
-nav:hover {
+#crearMenu {
+	font-size: 24px;
     cursor: pointer;
+    background-color: #f1f1f1;
+    border: solid 1px #f1f1f1;
+	color: rgba(0, 0, 0, 0.925);
+	border-radius: 5px;
 }
 
 .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
     font-size: 56px;
-    margin-left: 50px;
 }
 
 .openbtn {
     font-size: 29px;
     cursor: pointer;
     background-color: transparent;
-    padding: 10px 15px;
     border: none;
+	color: #f1f1f1;
+	display: flex;
+	align-items: center;
 }
   
 .openbtn:hover {
@@ -68,256 +75,135 @@ nav:hover {
 
 /*---------------------------------------------------------------------------MAIN--------------------------------------------------------------------------------------------*/
 
+.condiciones {
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-$defaultSeconds: 3s;
-
-.flex-container {
-	position: absolute;
-	height: 100vh;
-	width: 100%;
-	display: -webkit-flex; /* Safari */
+	position: absolute;																								/*Define el marco absoluto del cuerpo de la home*/
+	height: 80vh;																									/*Ocupa toda la vertical*/
+	width: 100%;																									/*Ocupa toda la horizontal*/
+	display: -webkit-flex; 																							/* Los navegadores basados en WebKit, como Chrome o Safari, a menudo requieren el prefijo "-webkit-" para ciertas propiedades CSS para garantizar la compatibilidad con versiones anteriores*/
 	display: flex;
 	overflow: hidden;
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 768px) {																			/*Los elementos pasan de organizarse REVISAR*/
 		flex-direction: column;
 	}
 }
-.flex-title {
+
+.bloque-condiciones {
+	padding-top: 80px;
+	position: relative;
+	-webkit-flex: 1;  																								/* Safari 6.1+ */
+	-ms-flex: 1;  																									/* IE 10 */    
+	flex: 1;																										/*Indica que la flexibilidad del elemento es igual a la de otros*/
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-ms-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;																						/*Todas las transiciones se daran en 0.5s*/
+	@media screen and (max-width: 768px) {																			/*Para pantallas de menos de 769px evita que haya scroll horizontal*/
+		overflow: auto;
+		overflow-x: hidden;
+	}
+}
+
+.bloque-condiciones:hover {
+	-webkit-flex-grow: 3;							
+	flex-grow: 3;																									/*El bloque de condiciones crecerá 3 veces más que el resto*/
+}
+
+#verduras {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Verduras\ 1.png);
+	background-size: contain;																						/*La imagen se escalará proporcionalmente hasta cubrir todo el elemento*/
+	background-position: center center;																				/*La imagen se colocará en el centro del eje vertical y del eje horizontal*/
+	background-attachment: fixed;																					/*la imagen permanecerá fija aunque se desplace el contenido*/
+}
+
+#pescado {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Pescado\ 1.png);
+	background-size: contain;
+	background-position: right center;
+	background-attachment: fixed;
+}
+
+#horarios {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Horarios\ 1.png);
+	background-size: contain;
+	background-position: right center;
+	background-attachment: fixed;
+}
+#carne {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Carne\ 2.png);
+	background-size: contain;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+.titulo-condiciones {
 	color: #f1f1f1;
 	position: relative;
-	font-size: 6vw;
+	font-size: 5vw;
 	margin: auto;
 	text-align: center;
-	transform: rotate(90deg);
+	transform: rotate(90deg);																						/*Por defecto muestra el título del bloque rotado*/
 	top: 15%;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;
+	transition: all 500ms ease;																						/*Las transiciones se realizarán en 0.5s con aceleración y desaceleración gradual*/
 	@media screen and (max-width: 768px) {
-		transform: rotate(0deg) !important;
+		transform: rotate(0deg) !important;																			/*Con prioridad, para tamaños menores a 769px no se rotará el título*/			
 	}
 }
-.flex-about {
+
+.seleccion {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;	
 	opacity: 0;
+}
+
+.opcion {
 	color: #f1f1f1;
+
+	border-radius: 5px;
 	position: relative;
-	width: 70%;
-	font-size: 2vw;
-	padding: 5%;
-	top: 20%;
-	border: 2px solid #f1f1f1;
-	border-radius: 10px;
-	line-height: 1.3;
-	margin: auto;
-	text-align: left;
-	transform: rotate(0deg);
+	font-size: 1.5vw;
+	height: 30px;
+	padding: 5px;
+	margin: 10px;
+	text-align: center;	
+	width: 70%;			
+	cursor: pointer;																	/*Por defecto muestra el título del bloque rotado*/
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;
-	@media screen and (max-width: 768px) {
-		padding: 0%;
-		border: 0px solid #f1f1f1;
-	}
+	transition: all 500ms ease;	
+	
 }
 
-
-.flex-slide {
-	-webkit-flex: 1;  /* Safari 6.1+ */
-	-ms-flex: 1;  /* IE 10 */    
-	flex: 1;
-	cursor: pointer;
-	-webkit-transition: all 500ms ease;
-	-moz-transition: all 500ms ease;
-	-ms-transition: all 500ms ease;
-	-o-transition: all 500ms ease;
-	transition: all 500ms ease;
-	@media screen and (max-width: 768px) {
-		overflow: auto;
-		overflow-x: hidden;
-	}
-}
-.flex-slide p {
-	@media screen and (max-width: 768px) {
-		font-size: 2em;
-	}
-} 
-.flex-slide ul li {
-	@media screen and (max-width: 768px) {
-		font-size: 2em;
-	}
-} 
-.flex-slide:hover {
-	-webkit-flex-grow: 3;
-	flex-grow: 3;
-}
-.home {
-	height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-macquarie-71208_1920.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;
-	@media screen and (min-width: 768px) {
-		animation: aboutFlexSlide $defaultSeconds 1;
-		animation-delay: 0s;
-	}
+.seleccionado {
+	color: black;
+	background-color: #f1f1f1;
 }
 
-@keyframes aboutFlexSlide {
-	0% {
-		-webkit-flex-grow: 1;
-		flex-grow: 1;
-	}
-	50% {
-		-webkit-flex-grow: 3;
-		flex-grow: 3;
-	}
-	100% {
-		-webkit-flex-grow: 1;
-		flex-grow: 1;
-	}
-}
-
-.flex-title-home {
-	@media screen and (min-width: 768px) {
-		transform: rotate(90deg);
-		top: 15%;
-		animation: aboutFlexSlide $defaultSeconds 1;
-		animation-delay: 0s;
-	}
-}
-
-
-
-@keyframes homeFlextitle {
-	0% {
-		transform: rotate(90deg);
-		top: 15%;
-	}
-	50% {
-		transform: rotate(0deg);
-		top: 15%;
-	}
-	100% {
-		transform: rotate(90deg);
-		top: 15%;
-	}
-}
-
-.flex-about-home {
-	opacity: 0;
-	@media screen and (min-width: 768px) {
-		animation: aboutFlexSlide $defaultSeconds 1;
-		animation-delay: 0s;
-	}
-}
-
-@keyframes flexAboutHome {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-
-
-.about {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/beach-2089959_1280.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;	
-}
-.contact-form {
-	width: 100%;
-}
-input {
-	width: 100%;
-}
-textarea {
-	width: 100%;	
-}
-.contact {
-		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-696098_1920.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;
-}
-.work {
-		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/forest-208517_1280.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;
-}
-
-
-
-// Preloader
-.spinner {
+/*FOOTER*/
+footer {
+	background-color: rgba(0, 0, 0, 0.925);
 	position: fixed;
-	top: 0;
-	left: 0;
-	background: #222;
-	height: 100%;
+	bottom: 0%;
+	color: #f1f1f1;
 	width: 100%;
-	z-index: 11;
-	margin-top: 0;
-	color: #fff;
-	font-size: 1em;
 }
-
-.cube1, .cube2 {
-  background-color: #fff;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
-  animation: sk-cubemove 1.8s infinite ease-in-out;
-}
-
-.cube2 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
-
-@-webkit-keyframes sk-cubemove {
-  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
-  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
-  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
-  100% { -webkit-transform: rotate(-360deg) }
-}
-
-@keyframes sk-cubemove {
-  25% { 
-    transform: translateX(42px) rotate(-90deg) scale(0.5);
-    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-  } 50% { 
-    transform: translateX(42px) translateY(42px) rotate(-179deg);
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
-  } 50.1% { 
-    transform: translateX(42px) translateY(42px) rotate(-180deg);
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-  } 75% { 
-    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-  } 100% { 
-    transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
-  }
-}
-
-
-/*---------------------------------------------------------------------------FOOTER--------------------------------------------------------------------------------------------*/
 

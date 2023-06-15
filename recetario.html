@@ -19,7 +19,7 @@
 
 <body>
 
-<!-------------------------------------------------------------INICIO HEADER------------------------------------------------------------------------------------->   
+<!--INICIO HEADER-->   
 
     <header>
 
@@ -28,64 +28,78 @@
         
         <nav>
 
-            <a class="nav-link" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="nav-link" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>     <!--botón para cerrar el menú hamburguesa-->
+
             <a class="nav-link" href="#">About</a>
             <a class="nav-link" href="#">Services</a>
             <a class="nav-link" href="#">Clients</a>
             <a class="nav-link" href="#">Contact</a>
         
         </nav>
-        
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <button id="crearMenu">MENÚ</button> 
+        <button class="openbtn" onclick="openNav()">&#9776;</button>                                            <!--botón de menú hamburguesa mediante código de entidad-->
 
     </header>
-
-<!-------------------------------------------------------------FIN HEADER------------------------------------------------------------------------------------->    
-<!-------------------------------------------------------------INICIO MAIN------------------------------------------------------------------------------------->    
+   
+<!--INICIO MAIN-->    
 
     <main>
 
-        <div class="flex-container">
+        <div class="condiciones">
             
-            <div class="flex-slide home">
-                <div class="flex-title flex-title-home">Home</div>
-                <div class="flex-about flex-about-home"><p>Click here to navigate to the home section of the website</p></div>
-            </div>
-            <div class="flex-slide about">
-                <div class="flex-title">About</div>
-                <div class="flex-about"><p>Click here to navigate to the About section of the website</p></div>
-            </div>
-            <div class="flex-slide work">
-                <div class="flex-title">Work</div>
-                <div class="flex-about"><p>Listing relevant snippets of work:</p>
-                    <ul>
-                        <li>First piece of work</li>
-                        <li>Second piece of work</li>
-                        <li>Third piece of work</li>
-                    </ul>
+            <div class="bloque-condiciones" id="verduras">
+
+                <div class="titulo-condiciones">Verduras</div>
+                <div class="seleccion">
+                    <div id="verd-opt1" class="opcion">Verduras x1</div>
+                    <div id="verd-opt2" class="opcion">Verduras x2</div>
+                    <div id="verd-opt3" class="opcion">Verduras x3</div>
                 </div>
+
             </div>
-            <div class="flex-slide contact">
-                <div class="flex-title">Contact</div>
-                        <div class="flex-about">
-                            <p>Use the contact form below</p>
-                            <form class="contact-form">
-                                <p>Email <input type="text" name="email"></p>
-                                <p>Comment <textarea type="text" name="comment" row="5"></textarea></p>
-                                <p><input type="submit" name="email" value="Send Message"></p>
-                            </form>
-        
+
+            <div class="bloque-condiciones" id="pescado">
+
+                <div class="titulo-condiciones">Pescado</div>
+                <div class="seleccion">
+                    <div id="pesc-opt1" class="opcion">Pescado x1</div>
+                    <div id="pesc-opt2" class="opcion">Pescado x2</div>
+                    <div id="pesc-opt3" class="opcion">Pescado x3</div>
                 </div>
+
             </div>
+
+            <div class="bloque-condiciones" id="carne">
+
+                <div class="titulo-condiciones">Carne</div>
+                <div class="seleccion">
+                    <div id="carne-opt1" class="opcion">Carne x1</div>
+                    <div id="carne-opt2" class="opcion">Carne x2</div>
+                    <div id="carne-opt3" class="opcion">Carne x3</div>
+                </div>
+
+            </div>
+
+            <div class="bloque-condiciones" id="horarios">
+
+                <div class="titulo-condiciones">Horarios</div>
+                <div class="seleccion">
+                    <div id="hora-opt1" class="opcion">Viernes se pide cena</div>
+                    <div id="hora-opt2" class="opcion">Sábado: comida</div>
+                    <div id="hora-opt3" class="opcion">Sábado: cena</div>
+                    <div id="hora-opt4" class="opcion">Domingo: comida</div>
+                </div>
+
+            </div>
+            
         </div>
 
     </main>
 
-<!-------------------------------------------------------------FIN MAIN------------------------------------------------------------------------------------->    
-<!-------------------------------------------------------------INICIO FOOTER------------------------------------------------------------------------------------->    
+<!--INICIO FOOTER-->    
 
     <footer>
-
+        <p>@DAIA FAMILY</p>
     </footer>
 
     <script src="./recetario.js"></script>
