@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--INICIO HEAD-->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de datos | Recetario</title>
+    <link href="estilosrecetarioglobal.css" type="text/css" rel="stylesheet">
+    <link href="estilosbbddrecetario.css" type="text/css" rel="stylesheet">
+    
+
+</head>
+
+<!--FIN HEAD-->
+
+<!--INICIO BODY-->
+
+<body>
+
+<!--INICIO HEADER-->   
+
+    <header>
+
+        <h1>Recetario</h1>
+
+        
+        <nav>
+
+            <a class="nav-link" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>     <!--botón para cerrar el menú hamburguesa-->
+
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#">Clients</a>
+            <a class="nav-link" href="#">Contact</a>
+        
+        </nav>
+        <button class="openbtn" onclick="openNav()">&#9776;</button>                                            <!--botón de menú hamburguesa mediante código de entidad-->
+
+    </header>
+   
+<!--INICIO MAIN-->    
+
+    <main>
+
+        <!--TABLA DE NUEVAS COMIDAS-->
+
+        <section id="nueva">
+
+            <input type="submit" id="introducir-comida" value="Agregar al menú">
+
+            <div id="tab-nueva">
+
+                <table id="nueva-comida">
+
+                    <thead>
+
+                        <tr id="bbddnueva-cabecera">
+
+                            <th class="bbddnueva-campoCab">Nombre</th>
+                            <th class="bbddnueva-campoCab">Plato</th>
+                            <th class="bbddnueva-campoCab">Tipo</th>
+                            <th class="bbddnueva-campoCab">Para</th>
+                            <th class="bbddnueva-campoCab">Comida o cena</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr id="bbddnueva-valores">
+                            <form action="./ejemplo.php" method="post">                            
+                                <td class="campo-bbdd"><input type="text" id="datoNombre" value="Introducir Nombre" required></td>
+
+                                <td class="campo-bbdd">
+                                    <input list="plato" id="datoPlato" name="datoPlato" required>
+                                    <datalist id="plato">
+                                        <option value="Primero">
+                                        <option value="Segundo">
+                                        <option value="Plato único">
+                                    </datalist>
+                                </td>
+
+                                <td class="campo-bbdd">
+                                    <input list="tipo" id="datoTipo" name="datoTipo" required>
+                                    <datalist id="tipo">
+                                        <option value="Verdura">
+                                        <option value="Pescado">
+                                        <option value="Carne">
+                                        <option value="Pasta">
+                                        <option value="Legumbre">
+                                    </datalist>
+                                </td>
+
+                                <td class="campo-bbdd">
+                                    <input list="para" id="datoPara" name="datoPara" required>
+                                    <datalist id="para">
+                                        <option value="Marc & Paul">
+                                        <option value="Amaia & David">
+                                        <option value="Todos">
+                                    </datalist>
+                                </td>
+
+                                <td class="campo-bbdd">
+                                    <input list="coc" id="datoCoc" name="datoCoc" required>
+                                    <datalist id="coc">
+                                        <option value="Comida">
+                                        <option value="Cena">
+                                        <option value="Comida o Cena">
+                                    </datalist>
+                                </td>
+                            </form>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            
+        </section>
+
+        <!--FIN TABLA DE NUEVAS COMIDAS-->
+
+        <!--TABLA DE BASE DE DATOS-->
+
+        <section id="tabla-final">
+
+            <table id="bbdd">
+
+                <thead>
+
+                    <tr id="cabecera-bbdd">
+
+                        <th class="cellCabeceraIcono"></th>
+                        <th class="cellCabeceraIcono"></th>
+                        <th class="cellCabeceraBBDD bbdd-num">#</th>
+                        <th class="cellCabeceraBBDD bbdd-nombre">Nombre</th>
+                        <th class="cellCabeceraBBDD bbdd-plato">Plato</th>
+                        <th class="cellCabeceraBBDD bbdd-tipo">Tipo</th>
+                        <th class="cellCabeceraBBDD bbdd-para">Para</th>
+                        <th class="cellCabeceraBBDD bbdd-comidaocena">Comida o cena</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr id="1" class="fila-tabla-bbdd">
+
+                        <td class="bbdd-edit"><button class="butEdit"><i class="fa-solid fa-pen-to-square" style="color: #f1f1f1;"></i></button></td>
+                        <td class="bbdd-borrar"><button class="butDelete"><i class="fa-solid fa-trash" style="color: #f1f1f1;"></i></button></td>
+                        <td class="bbdd-num">1</td>
+                        <td class="bbdd-nombre">Arroz con tomate (Thermomix)</td>
+                        <td class="bbdd-plato">Primero</td>
+                        <td class="bbdd-tipo">Arroz</td>
+                        <td class="bbdd-para">Todos</td>
+                        <td class="bbdd-comidaocena">Comida o cena</td>
+
+                    </tr>
+
+                    <tr id="2" class="fila-tabla-bbdd">
+
+                        <td class="bbdd-edit"><button class="butEdit"><i class="fa-solid fa-pen-to-square" style="color: #f1f1f1;"></i></button></td>
+                        <td class="bbdd-borrar"><button class="butDelete"><i class="fa-solid fa-trash" style="color: #f1f1f1;"></i></button></td>
+                        <td class="bbdd-num">2</td>
+                        <td class="bbdd-nombre">Arroz a la cubana</td>
+                        <td class="bbdd-plato">Primero</td>
+                        <td class="bbdd-tipo">Arroz</td>
+                        <td class="bbdd-para">Todos</td>
+                        <td class="bbdd-comidaocena">Comida o cena</td>
+
+                    </tr>
+
+                    <tr id="3" class="fila-tabla-bbdd">
+
+                        <td class="bbdd-edit"><button class="butEdit"><i class="fa-solid fa-pen-to-square" style="color: #f1f1f1;"></i></button></td>
+                        <td class="bbdd-borrar"><button class="butDelete"><i class="fa-solid fa-trash" style="color: #f1f1f1;"></i></button></td>
+                        <td class="bbdd-num">3</td>
+                        <td class="bbdd-nombre">Brócoli</td>
+                        <td class="bbdd-plato">Primero</td>
+                        <td class="bbdd-tipo">Verdura</td>
+                        <td class="bbdd-para">Todos</td>
+                        <td class="bbdd-comidaocena">Comida o cena</td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!--FIN TABLA DE BASE DE DATOS-->
+
+    </main>
+
+<!--INICIO FOOTER-->    
+
+    <footer>
+        <p>@DAIA FAMILY</p>
+    </footer>
+
+    <script src="./recetario.js"></script>
+    <script src="https://kit.fontawesome.com/a364ada1f2.js" crossorigin="anonymous"></script>
+    
+</body>
+
+<!--FIN BODY-->
+
+</html>

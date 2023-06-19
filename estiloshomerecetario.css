@@ -1,77 +1,4 @@
-* {
 
-    font-family: Lora, Georgia;
-    box-sizing: content-box;
-    text-align: center;
-}
-
-body {
-    background-color: rgba(0, 0, 0, 0.925);
-	margin: 0;
-	padding: 0;
-}
-
-header {
-
-    display: grid;
-	color: #f1f1f1;
-    grid-template: 100px / 89% 7% 4%;																					/*Estructura grid de fila de 100px y dos columnas (93% - 7%*/
-    justify-content: center;
-    align-items: center;
-}
-
-nav {
-
-    height: 250px;
-    width: 0; 																										/* 0 width - change this with JavaScript */
-    position: fixed; 																								/* Stay in place */
-    z-index: 1; 																									/* Stay on top */
-    top: 0;																											/*Posición fija arriba del todo*/
-    right: 0;																										/*Posición fija a la derecha del todo*/
-    background-color: #111;
-    overflow-x: hidden; 																							/* Disable horizontal scroll */
-    padding-top: 20px; 																								/* Place content 60px from the top */
-    transition: 0.5s; 																							/* 0.5 second transition effect cuando cambie de estado */
-}
-
-.nav-link {
-
-    padding: 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;																								/* 0.3 second transition effect, de arriba a abajo */
-}
-
-#crearMenu {
-	font-size: 24px;
-    cursor: pointer;
-    background-color: #f1f1f1;
-    border: solid 1px #f1f1f1;
-	color: rgba(0, 0, 0, 0.925);
-	border-radius: 5px;
-}
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    font-size: 56px;
-}
-
-.openbtn {
-    font-size: 29px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-	color: #f1f1f1;
-	display: flex;
-	align-items: center;
-}
-  
-.openbtn:hover {
-    font-weight: bold;
-}
 
 /*---------------------------------------------------------------------------MAIN--------------------------------------------------------------------------------------------*/
 
@@ -79,7 +6,8 @@ nav {
 
 	position: absolute;																								/*Define el marco absoluto del cuerpo de la home*/
 	height: 80vh;																									/*Ocupa toda la vertical*/
-	width: 100%;																									/*Ocupa toda la horizontal*/
+	width: 100%;
+	margin-top: 90px;																									/*Ocupa toda la horizontal*/
 	display: -webkit-flex; 																							/* Los navegadores basados en WebKit, como Chrome o Safari, a menudo requieren el prefijo "-webkit-" para ciertas propiedades CSS para garantizar la compatibilidad con versiones anteriores*/
 	display: flex;
 	overflow: hidden;
@@ -113,14 +41,14 @@ nav {
 #verduras {
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Verduras\ 1.png);
 	background-size: contain;																						/*La imagen se escalará proporcionalmente hasta cubrir todo el elemento*/
-	background-position: center center;																				/*La imagen se colocará en el centro del eje vertical y del eje horizontal*/
+	background-position: left center;																				/*La imagen se colocará en el centro del eje vertical y del eje horizontal*/
 	background-attachment: fixed;																					/*la imagen permanecerá fija aunque se desplace el contenido*/
 }
 
 #pescado {
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Pescado\ 1.png);
 	background-size: contain;
-	background-position: right center;
+	background-position: left center;
 	background-attachment: fixed;
 }
 
@@ -144,7 +72,7 @@ nav {
 	margin: auto;
 	text-align: center;
 	transform: rotate(90deg);																						/*Por defecto muestra el título del bloque rotado*/
-	top: 15%;
+	top: 25%;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
@@ -197,13 +125,3 @@ nav {
 	color: black;
 	background-color: #f1f1f1;
 }
-
-/*FOOTER*/
-footer {
-	background-color: rgba(0, 0, 0, 0.925);
-	position: fixed;
-	bottom: 0%;
-	color: #f1f1f1;
-	width: 100%;
-}
-
