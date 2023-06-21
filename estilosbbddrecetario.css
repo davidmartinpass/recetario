@@ -122,10 +122,8 @@ th, td {
 }
 
 .cellCabeceraIcono, .bbdd-edit, .bbdd-borrar {
-
     border: none !important;
     width: 2em;
-
 }
 
 .fila-tabla-bbdd {

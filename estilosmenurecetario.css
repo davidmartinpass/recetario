@@ -1,0 +1,63 @@
+main {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(./Imágenes/fondo\ opacity.jpg);
+	background-size: cover;
+	background-position: right center;
+	background-attachment: fixed;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table, thead, tbody {
+
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.0);
+
+}
+
+th, td {
+    color: #f1f1f1;
+    border: solid 1px rgb(76, 72, 72);
+    text-align: center;
+    font-size: 15px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#tabla-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.celda-cab-menu {
+    line-height: 3em;
+    align-self: center;
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(76, 72, 72);
+    color: #f1f1f1;
+    border: #f1f1f1 1px solid;
+}
+
+.comida-niños, .comida-daia, .cena-niños, .cena-daia {
+    border: 1px #f1f1f1 solid;
+    line-height: 3em;
+    align-self: center;
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 2;
+}
+
+.celda-sin-colores {
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 49px;
+}
