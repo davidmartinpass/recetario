@@ -45,6 +45,3 @@ opciones.forEach(opcion => {
     this.classList.toggle('seleccionado');
   });
 });
-
-
-

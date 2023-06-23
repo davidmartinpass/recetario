@@ -1,402 +1,129 @@
-//-----------------------------------------------------------------BBDD-----------------------------------------------------------------------------
+//-----------------------------------------------------------------CÁLCULO DE MENÚ--------------------------------------------------------------------------
+  
+  // MATRIZ DE MENÚS
 
-const datosBBDD = {
-    registros: [
-      {
-        brocoli: {
-          id: '1',
-          nombre: 'Brócoli',
-          plato: 'Primero',
-          tipo: 'Verdura',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        arrozCubana: {
-          id: '2',
-          nombre: 'Arroz a la cubana',
-          plato: 'Primero',
-          tipo: 'Arroz',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        arrozTomate: {
-          id: '3',
-          nombre: 'Arroz con tomate (Thermomix)',
-          plato: 'Primero',
-          tipo: 'Arroz',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        lomo: {
-          id: '4',
-          nombre: 'Lomo',
-          plato: 'Segundo',
-          tipo: 'Carne',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        vainasPatatas: {
-          id: '5',
-          nombre: 'Vainas con patatas',
-          plato: 'Primero',
-          tipo: 'Verdura',
-          para: 'Todos',
-          coc: 'Comida'
-        }
-      },
-      {
-        merluzaRebozada: {
-          id: '6',
-          nombre: 'Merluza rebozada',
-          plato: 'Segundo',
-          tipo: 'Pescado',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        macarronesTomate: {
-          id: '7',
-          nombre: 'Macarrones con tomate',
-          plato: 'Primero',
-          tipo: 'Pasta',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        salchichasPatatas: {
-          id: '8',
-          nombre: 'Salchichas con patatas',
-          plato: 'Segundo',
-          tipo: 'Carne',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        alitasPollo: {
-          id: '9',
-          nombre: 'Alitas de pollo',
-          plato: 'Segundo',
-          tipo: 'Carne',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        pechugasPollo: {
-          id: '10',
-          nombre: 'Pechugas de pollo',
-          plato: 'Segundo',
-          tipo: 'Carne',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        salmonPatatas: {
-          id: '11',
-          nombre: 'Salmón con patatas',
-          plato: 'Plato único',
-          tipo: 'Pescado',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        coliflor: {
-          id: '12',
-          nombre: 'Coliflor',
-          plato: 'Primero',
-          tipo: 'Verdura',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        quesadillas: {
-          id: '13',
-          nombre: 'Quesadillas',
-          plato: 'Segundo',
-          tipo: 'Mexican',
-          para: 'Amaia & David',
-          coc: 'Cena'
-        }
-      },
-      {
-        nachosGuacamole: {
-          id: '14',
-          nombre: 'Nachos con guacamole',
-          plato: 'Segundo',
-          tipo: 'Mexican',
-          para: 'Amaia & David',
-          coc: 'Cena'
-        }
-      },
-      {
-        nachosQuesadillas: {
-          id: '15',
-          nombre: 'Guacamole y quesadillas',
-          plato: 'Plato único',
-          tipo: 'Mexican',
-          para: 'Amaia & David',
-          coc: 'Cena'
-        }
-      },
-      {
-        lentejas: {
-          id: '16',
-          nombre: 'Lentejas',
-          plato: 'Primero',
-          tipo: 'Legumbres',
-          para: 'Todos',
-          coc: 'Comida'
-        }
-      },
-      {
-        patatasRiojana: {
-          id: '17',
-          nombre: 'Patatas a la riojana',
-          plato: 'Primero',
-          tipo: 'Puchero',
-          para: 'Todos',
-          coc: 'Comida'
-        }
-      },
-      {
-        arrozVerduras: {
-          id: '18',
-          nombre: 'Arroz con verduras',
-          plato: 'Primero',
-          tipo: 'Arroz',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        arrozVerdurasTM: {
-          id: '19',
-          nombre: 'Arroz con sofrito de verduras (ThermoMix)',
-          plato: 'Primero',
-          tipo: 'Arroz',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        espaguetiCarbonara: {
-          id: '20',
-          nombre: 'Espagueti a la carbonara',
-          plato: 'Primero',
-          tipo: 'Pasta',
-          para: 'Amaia & David',
-          coc: 'Comida'
-        }
-      },
-      {
-        pastaFresca: {
-          id: '21',
-          nombre: 'Pasta fresca',
-          plato: 'Primero',
-          tipo: 'Pasta',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        pureCalabaza: {
-          id: '22',
-          nombre: 'Puré de calabaza',
-          plato: 'Primero',
-          tipo: 'Verdura',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        pureCalabacin: {
-          id: '23',
-          nombre: 'Puré de calabacín',
-          plato: 'Primero',
-          tipo: 'Verdura',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        albondigas: {
-          id: '24',
-          nombre: 'Albóndigas',
-          plato: 'Segundo',
-          tipo: 'Carne',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        polloPatatas: {
-          id: '25',
-          nombre: 'Pollo con patatas',
-          plato: 'Plato único',
-          tipo: 'Carne',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        arrozPolloTM: {
-          id: '26',
-          nombre: 'Arroz con pollo (ThermoMix)',
-          plato: 'Plato único',
-          tipo: 'Arroz',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        calabacinRellenoTM: {
-          id: '27',
-          nombre: 'Calabacín relleno (ThermoMix)',
-          plato: 'Segundo',
-          tipo: 'Verdura',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        fideosVerdurasTM: {
-          id: '28',
-          nombre: 'Fideos con verduras (ThermoMix)',
-          plato: 'Primero',
-          tipo: 'Pasta',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        salmorejo: {
-          id: '29',
-          nombre: 'Salmorejo (ThermoMix)',
-          plato: 'Primero',
-          tipo: 'Verdura',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        ensaladaPasta: {
-          id: '30',
-          nombre: 'Ensalada de pasta',
-          plato: 'Plato único',
-          tipo: 'Ensalada',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        ensaladaTomBonAguac: {
-          id: '31',
-          nombre: 'Ensalada de tomate, bonito y aguacate',
-          plato: 'Primero',
-          tipo: 'Ensalada',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        poloMielArrozTM: {
-          id: '32',
-          nombre: 'Pollo a la miel con arroz (ThermoMix)',
-          plato: 'Plato único',
-          tipo: 'Carne',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        constillaBarbacoa: {
-          id: '33',
-          nombre: 'Costilla con salsa barbacoa',
-          plato: 'Segundo',
-          tipo: 'Carne',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        macCheese: {
-          id: '34',
-          nombre: 'Mac&Cheese',
-          plato: 'Plato único',
-          tipo: 'Pasta',
-          para: 'Todos',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        polloAjilloTM: {
-          id: '35',
-          nombre: 'Pollo al ajillo (ThermoMix)',
-          plato: 'Segundo',
-          tipo: 'Carne',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      }
-    ],
-  
-    agregarRegistro: function(registro) {
-      this.registros.push(registro);
-    },
-  
-    obtenerRegistros: function() {
-      return this.registros;
-    },
-  
-    editarRegistro: function(indice, nuevoObjeto) {
-      this.registros[indice] = nuevoObjeto;
-    },
-  
-    eliminarRegistro: function(indice) {
-      this.registros.splice(indice, 1);
-    }
-  };
-  
-  
-  
-  
-  
-  
-  //-----------------------------------------------------------------CÁLCULO DE MENÚ--------------------------------------------------------------------------
-  
   const comidasNiños = [];
   const comidasDaia = [];
   const cenasNiños = [];
   const cenasDaia = [];
   const nuevoMenu = [comidasNiños, comidasDaia, cenasNiños, cenasDaia];
+
+  // FILAS DE LA TABLA DE MENÚS
   
-  const filaCenasNiños = document.querySelectorAll('.añadir-valores');
+  const filaComidasNiños = document.querySelectorAll('.comida-niños.añadir-valores');
+  const filaComidasDaia = document.querySelectorAll('.comida-daia.añadir-valores');
+  const filaCenasNiños = document.querySelectorAll('.cena-niños.añadir-valores');
+  const filaCenasDaia = document.querySelectorAll('.cena-daia.añadir-valores');
+
+  // RESTRICCIONES: Asignar a opciones en HOME
+
+    // RESTRICCIÓN 1: SEMANA DE COLE
+
+    let semanaCole = true;
+    let sinComida;
+
+    //document.querySelector('#hora-opt1').classList.contains('seleccionado') ? semanaCole = true : semanaCole = false;
+    sinComida = semanaCole ? 5 : 0;
+
+    // RESTRICCIÓN 2: SÁBADO O DOMINGO COMIDA
+
+    let sabadoComida = true;
+    let domingoComida = true;
+
+    // COMIDAS PARA TODOS
   
   function crearMenu () {                                                                     // La función que crea un nuevo menú
+
     const registros = datosBBDD.registros;                                                    // Hace referencia al objeto registros dentro del objeto BBDD
+
     //COMIDAS NIÑOS
-    for(let i = 0; i < 7; i++) {                                                              // El bucle itera 7 veces(por los días de la semana)
-      
-      const objetoAleatorio = registros[Math.floor(Math.random() * registros.length)];        // Selecciona un objeto de forma aleatoria dentro del arreglo de registros
-      const nombreAleatorio = objetoAleatorio[Object.keys(objetoAleatorio)[0]].nombre;        // Obtener el valor de la clave "nombre" del objeto seleccionado
-      comidasNiños.push(nombreAleatorio);                                                     // Incluye el valor del nombre aleatorio en la matriz de comidasNiños
+
+    if(semanaCole === true) {
+
+      for(let i = 0; i < 7; i++) {
+
+        if(i < 5) {
+          comidasNiños.push('Sin comida');
+        } else {
+          const objetoAleatorio = registros[Math.floor(Math.random() * registros.length)];        // Selecciona un objeto de forma aleatoria dentro del arreglo de registros
+          const nombreAleatorio = objetoAleatorio[Object.keys(objetoAleatorio)[0]].nombre;        // Obtener el valor de la clave "nombre" del objeto seleccionado
+          comidasNiños.push(nombreAleatorio);                                                     // Incluye el valor del nombre aleatorio en la matriz de comidasNiños
+        }
+        
+        filaComidasNiños[i].innerHTML = comidasNiños[i];
+
+      }} else {
+
+        for(let i = 0; i < 7; i++) {
+
+        const objetoAleatorio = registros[Math.floor(Math.random() * registros.length)];        // Selecciona un objeto de forma aleatoria dentro del arreglo de registros
+        const nombreAleatorio = objetoAleatorio[Object.keys(objetoAleatorio)[0]].nombre;        // Obtener el valor de la clave "nombre" del objeto seleccionado
+        comidasNiños.push(nombreAleatorio);                                                     // Incluye el valor del nombre aleatorio en la matriz de comidasNiños
+        filaComidasNiños[i].innerHTML = comidasNiños[i];                                        // Inserta el valor en la tabla
+        }
+      }
+
+    if(sabadoComida) {
+      filaComidasNiños[5].innerHTML = 'Hay comida'; 
+    }
+
+    if(domingoComida) {
+      filaComidasNiños[6].innerHTML = 'Hay comida'; 
     }
   
-    console.log(comidasNiños);
+    //COMIDAS AMAIA & DAVID
+    for(let i = 0; i < 7; i++) {                                                            
+      
+      if(semanaCole === true) {
+
+        for(let i = 0; i < 7; i++) {
+  
+          if(i < 5) {
+            comidasDaia.push('Sin comida');
+          } else {
+            const objetoAleatorio = registros[Math.floor(Math.random() * registros.length)];        // Selecciona un objeto de forma aleatoria dentro del arreglo de registros
+            const nombreAleatorio = objetoAleatorio[Object.keys(objetoAleatorio)[0]].nombre;        // Obtener el valor de la clave "nombre" del objeto seleccionado
+            comidasDaia.push(nombreAleatorio);                                                     // Incluye el valor del nombre aleatorio en la matriz de comidasNiños
+          }
+          
+          filaComidasDaia[i].innerHTML = comidasDaia[i]; 
+  
+        }} else {
+  
+          for(let i = 0; i < 7; i++) {
+          const objetoAleatorio = registros[Math.floor(Math.random() * registros.length)];        // Selecciona un objeto de forma aleatoria dentro del arreglo de registros
+          const nombreAleatorio = objetoAleatorio[Object.keys(objetoAleatorio)[0]].nombre;        // Obtener el valor de la clave "nombre" del objeto seleccionado
+          comidasDaia.push(nombreAleatorio);                                                     // Incluye el valor del nombre aleatorio en la matriz de comidasNiños
+          filaComidasDaia[i].innerHTML = comidasDaia[i];                                        // Inserta el valor en la tabla
+          }
+        }                                        
+      }
+
+    if(sabadoComida) {
+      filaComidasDaia[5].innerHTML = 'Hay comida'; 
+    }
+
+    if(domingoComida) {
+      filaComidasDaia[6].innerHTML = 'Hay comida'; 
+    }
+
+    //CENAS NIÑOS
+    for(let i = 0; i < 7; i++) {
+      
+        const objetoAleatorio = registros[Math.floor(Math.random() * registros.length)];
+        const nombreAleatorio = objetoAleatorio[Object.keys(objetoAleatorio)[0]].nombre;
+        cenasNiños.push(nombreAleatorio);
+        filaCenasNiños[i].innerHTML = cenasNiños[i];
+      }
+
+    //CENAS AMAIA & DAVID
+    for(let i = 0; i < 7; i++) {                                                         
+      
+        const objetoAleatorio = registros[Math.floor(Math.random() * registros.length)];     
+        const nombreAleatorio = objetoAleatorio[Object.keys(objetoAleatorio)[0]].nombre;    
+        cenasDaia.push(nombreAleatorio);                                                  
+        filaCenasDaia[i].innerHTML = cenasDaia[i];
+      }
   
   }
   
