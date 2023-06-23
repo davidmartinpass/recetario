@@ -45,7 +45,7 @@ th, td {
     border: #f1f1f1 1px solid;
 }
 
-.comida-niños, .comida-daia, .cena-niños, .cena-daia {
+.comida-primero-niños, .comida-segundo-niños, .comida-primero-daia, .comida-segundo-daia, .cena-primero-niños, .cena-segundo-niños, .cena-primero-daia, .cena-segundo-daia {
     border: 1px #f1f1f1 solid;
     line-height: 3em;
     align-self: center;
