@@ -31,7 +31,7 @@
 
     // RESTRICCIÓN 1: SEMANA DE COLE, solo cenas
 
-    let semanaCole = true;
+    let semanaCole = false;                                                                   // Restricción de semana de cole
 
     if(semanaCole === true) {
       for(let i = 0; i < 5; i++) {
@@ -44,7 +44,7 @@
 
     // RESTRICCIÓN 2: SÁBADO O DOMINGO COMIDA
 
-    let sabadoComida = true;
+    let sabadoComida = false;                                                                  // Restricción de sábado comida
 
     if(sabadoComida === true) {
       comidasPrimerosNiños[5] = 'Se come fuera';
@@ -53,7 +53,7 @@
       comidasSegundosDaia[5] = 'Se come fuera';
     }
 
-    let domingoComida = true;
+    let domingoComida = false;                                                                 // Restricción de domingo comida
 
     if(domingoComida === true) {
       comidasPrimerosNiños[6] = 'Se come fuera';
@@ -64,17 +64,166 @@
 
     //COMIDAS PRIMEROS NIÑOS
 
+    const CPNAleatorias = datosBBDD.registros.filter(registro => {                             // se filtra el objeto regsitros del objeto BBDD
+      return (registro[Object.keys(registro)].plato === 'Primero' || registro[Object.keys(registro)].plato === 'Plato único')       // devuelve un objeto que cumpla unas condiciones
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Marc & Paul')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Comida');
+    });
+
+    const CPNAleatoriasNombres = CPNAleatorias.map(registro => {                               // Devuelve el nombre de cada objeto filtrado
+      return registro[Object.keys(registro)].nombre;
+    });
+
+    for(let i = 0; i < comidasPrimerosNiños.length; i++) {                                     // 
+      if(comidasPrimerosNiños[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CPNAleatoriasNombres.length);
+        comidasPrimerosNiños[i] = CPNAleatoriasNombres[indiceAleatorio];
+        CPNAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
   
-    //COMIDAS AMAIA & DAVID
+    //COMIDAS PRIMEROS AMAIA & DAVID
     
+    const CPDAleatorias = datosBBDD.registros.filter(registro => {
+      return (registro[Object.keys(registro)].plato === 'Primero' || registro[Object.keys(registro)].plato === 'Plato único')
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Amaia & David')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Comida');
+    });
 
-    //CENAS NIÑOS
-    
+    const CPDAleatoriasNombres = CPDAleatorias.map(registro => {
+      return registro[Object.keys(registro)].nombre;
+    });
 
-    //CENAS AMAIA & DAVID
+    for(let i = 0; i < comidasPrimerosDaia.length; i++) {
+      if(comidasPrimerosDaia[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CPDAleatoriasNombres.length);
+        comidasPrimerosDaia[i] = CPDAleatoriasNombres[indiceAleatorio];
+        CPDAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
+
+    //COMIDAS SEGUNDOS NIÑOS
+
+    const CSNAleatorias = datosBBDD.registros.filter(registro => {
+      return registro[Object.keys(registro)].plato === 'Segundo'
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Marc & Paul')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Comida');
+    });
+
+    const CSNAleatoriasNombres = CSNAleatorias.map(registro => {
+      return registro[Object.keys(registro)].nombre;
+    });
+
+    for(let i = 0; i < comidasSegundosNiños.length; i++) {
+      if(comidasSegundosNiños[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CSNAleatoriasNombres.length);
+        comidasSegundosNiños[i] = CSNAleatoriasNombres[indiceAleatorio];
+        CSNAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
+
+    //COMIDAS SEGUNDOS DAIA
+
+    const CSDAleatorias = datosBBDD.registros.filter(registro => {
+      return registro[Object.keys(registro)].plato === 'Segundo'
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Amaia & David')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Comida');
+    });
+
+    const CSDAleatoriasNombres = CSDAleatorias.map(registro => {
+      return registro[Object.keys(registro)].nombre;
+    });
+
+    for(let i = 0; i < comidasSegundosDaia.length; i++) {
+      if(comidasSegundosDaia[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CSDAleatoriasNombres.length);
+        comidasSegundosDaia[i] = CSDAleatoriasNombres[indiceAleatorio];
+        CSDAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
+
+    //CENAS PRIMEROS NIÑOS
+
+    const CePNAleatorias = datosBBDD.registros.filter(registro => {
+      return (registro[Object.keys(registro)].plato === 'Primero' || registro[Object.keys(registro)].plato === 'Plato único')
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Marc & Paul')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
+    });
+
+    const CePNAleatoriasNombres = CePNAleatorias.map(registro => {
+      return registro[Object.keys(registro)].nombre;
+    });
+
+    for(let i = 0; i < cenasPrimerosNiños.length; i++) {
+      if(cenasPrimerosNiños[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CePNAleatoriasNombres.length);
+        cenasPrimerosNiños[i] = CePNAleatoriasNombres[indiceAleatorio];
+        CePNAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
+
+    //CENAS PRIMEROS DAIA
+
+    const CePDAleatorias = datosBBDD.registros.filter(registro => {
+      return (registro[Object.keys(registro)].plato === 'Primero' || registro[Object.keys(registro)].plato === 'Plato único')
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Amaia & David')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
+    });
+
+    const CePDAleatoriasNombres = CePDAleatorias.map(registro => {
+      return registro[Object.keys(registro)].nombre;
+    });
+
+    for(let i = 0; i < cenasPrimerosDaia.length; i++) {
+      if(cenasPrimerosDaia[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CePDAleatoriasNombres.length);
+        cenasPrimerosDaia[i] = CePDAleatoriasNombres[indiceAleatorio];
+        CePDAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
+
+    //CENAS SEGUNDOS NIÑOS
+
+    const CeSNAleatorias = datosBBDD.registros.filter(registro => {
+      return (registro[Object.keys(registro)].plato === 'Segundo' || registro[Object.keys(registro)].plato === 'Plato único')
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Marc & Paul')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
+    });
+
+    const CeSNAleatoriasNombres = CeSNAleatorias.map(registro => {
+      return registro[Object.keys(registro)].nombre;
+    });
+
+    for(let i = 0; i < cenasSegundosNiños.length; i++) {
+      if(cenasSegundosNiños[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CeSNAleatoriasNombres.length);
+        cenasSegundosNiños[i] = CeSNAleatoriasNombres[indiceAleatorio];
+        CeSNAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
+
+    //CENAS SEGUNDOS DAIA
+
+    const CeSDAleatorias = datosBBDD.registros.filter(registro => {
+      return (registro[Object.keys(registro)].plato === 'Segundo' || registro[Object.keys(registro)].plato === 'Plato único')
+        && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Amaia & David')
+        && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
+    });
+
+    const CeSDAleatoriasNombres = CeSDAleatorias.map(registro => {
+      return registro[Object.keys(registro)].nombre;
+    });
+
+    for(let i = 0; i < cenasSegundosDaia.length; i++) {
+      if(cenasSegundosDaia[i] === undefined) {
+        const indiceAleatorio = Math.floor(Math.random() * CeSDAleatoriasNombres.length);
+        cenasSegundosDaia[i] = CeSDAleatoriasNombres[indiceAleatorio];
+        CeSDAleatoriasNombres.splice(indiceAleatorio, 1);
+      }
+    }
    
 
-    // VOLVAR MATRIZ EN TABLA
+    // VOLCAR MATRIZ EN TABLA
     console.log(nuevoMenu);
     for(let z = 0; z < comidasPrimerosNiños.length; z++) {                                    // Vuelca la fila de comidasPrimerosNiños
       filaComidasPrimerosNiños[z].innerHTML = comidasPrimerosNiños[z];

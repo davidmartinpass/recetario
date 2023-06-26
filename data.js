@@ -25,7 +25,7 @@ const datosBBDD = {
       {
         arrozTomate: {
           id: '3',
-          nombre: 'Arroz con tomate (Thermomix)',
+          nombre: 'Arroz con tomate TM',
           plato: 'Primero',
           tipo: 'Arroz',
           para: 'Todos',
@@ -185,7 +185,7 @@ const datosBBDD = {
       {
         arrozVerdurasTM: {
           id: '19',
-          nombre: 'Arroz con sofrito de verduras (ThermoMix)',
+          nombre: 'Arroz con sofrito de verduras TM',
           plato: 'Primero',
           tipo: 'Arroz',
           para: 'Todos',
@@ -255,7 +255,7 @@ const datosBBDD = {
       {
         arrozPolloTM: {
           id: '26',
-          nombre: 'Arroz con pollo (ThermoMix)',
+          nombre: 'Arroz con pollo TM',
           plato: 'Plato único',
           tipo: 'Arroz',
           para: 'Todos',
@@ -265,7 +265,7 @@ const datosBBDD = {
       {
         calabacinRellenoTM: {
           id: '27',
-          nombre: 'Calabacín relleno (ThermoMix)',
+          nombre: 'Calabacín relleno TM',
           plato: 'Segundo',
           tipo: 'Verdura',
           para: 'Amaia & David',
@@ -275,7 +275,7 @@ const datosBBDD = {
       {
         fideosVerdurasTM: {
           id: '28',
-          nombre: 'Fideos con verduras (ThermoMix)',
+          nombre: 'Fideos con verduras TM',
           plato: 'Primero',
           tipo: 'Pasta',
           para: 'Todos',
@@ -285,7 +285,7 @@ const datosBBDD = {
       {
         salmorejo: {
           id: '29',
-          nombre: 'Salmorejo (ThermoMix)',
+          nombre: 'Salmorejo TM',
           plato: 'Primero',
           tipo: 'Verdura',
           para: 'Todos',
@@ -315,7 +315,7 @@ const datosBBDD = {
       {
         poloMielArrozTM: {
           id: '32',
-          nombre: 'Pollo a la miel con arroz (ThermoMix)',
+          nombre: 'Pollo a la miel con arroz TM',
           plato: 'Plato único',
           tipo: 'Carne',
           para: 'Amaia & David',
@@ -345,10 +345,20 @@ const datosBBDD = {
       {
         polloAjilloTM: {
           id: '35',
-          nombre: 'Pollo al ajillo (ThermoMix)',
+          nombre: 'Pollo al ajillo TM',
           plato: 'Segundo',
           tipo: 'Carne',
           para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        tortillaFrancesa: {
+          id: '36',
+          nombre: 'Tortilla francesa',
+          plato: 'Segundo',
+          tipo: 'Huevo',
+          para: 'Todos',
           coc: 'Comida o cena'
         }
       }
