@@ -3,7 +3,9 @@ main {
 	background-size: cover;
 	background-position: right center;
 	background-attachment: fixed;
-    height: 100vh;
+    height: 95vh;
+    margin-top: 90px;
+    margin-bottom: 50px;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -50,9 +52,9 @@ th, td {
     line-height: 3em;
     align-self: center;
     width: auto;
-    padding-left: 1em;
-    padding-right: 1em;
-    line-height: 1.8;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    line-height: 1.6;
 }
 
 .celda-sin-colores {

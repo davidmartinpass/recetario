@@ -361,6 +361,56 @@ const datosBBDD = {
           para: 'Todos',
           coc: 'Comida o cena'
         }
+      },
+      {
+        pastelVerduras: {
+          id: '37',
+          nombre: 'Pastel de verduras TM',
+          plato: 'Segundo',
+          tipo: 'Verdura',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        estofadoBerenjena: {
+          id: '38',
+          nombre: 'Estofado de berenjena con arroz TM',
+          plato: 'Plato único',
+          tipo: 'Verdura',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        pistoArroz: {
+          id: '39',
+          nombre: 'Pisto con arroz TM',
+          plato: 'Plato único',
+          tipo: 'Verdura',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        conejoPatatas: {
+          id: '40',
+          nombre: 'Conejo con patatas',
+          plato: 'Segundo',
+          tipo: 'Carne',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        hamburguesa: {
+          id: '41',
+          nombre: 'Hamburguesa',
+          plato: 'Segundo',
+          tipo: 'Carne',
+          para: 'Todos',
+          coc: 'Comida o cena'
+        }
       }
     ],
   
