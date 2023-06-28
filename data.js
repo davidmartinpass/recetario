@@ -106,7 +106,7 @@ const datosBBDD = {
         salmonPatatas: {
           id: '11',
           nombre: 'Salmón con patatas',
-          plato: 'Plato único',
+          plato: 'Segundo',
           tipo: 'Pescado',
           para: 'Amaia & David',
           coc: 'Comida o cena'
@@ -323,7 +323,7 @@ const datosBBDD = {
         }
       },
       {
-        constillaBarbacoa: {
+        costillaBarbacoa: {
           id: '33',
           nombre: 'Costilla con salsa barbacoa',
           plato: 'Segundo',
@@ -336,7 +336,7 @@ const datosBBDD = {
         macCheese: {
           id: '34',
           nombre: 'Mac&Cheese',
-          plato: 'Plato único',
+          plato: 'Primero',
           tipo: 'Pasta',
           para: 'Todos',
           coc: 'Comida o cena'

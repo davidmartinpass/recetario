@@ -70,15 +70,23 @@
         && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Comida');
     });
 
-    for(let i = 0; i < comidasPrimerosNiños.length; i++) {                                      // El bucle recorre la matriz de comidasPrimerosNiños 
-      if(comidasPrimerosNiños[i] === undefined) {                                               // Si encuentra un índice sin valor
-        const indiceAleatorio = Math.floor(Math.random() * CPNAleatorias.length);               // Crea un índice aleatorio
-        const platoSeleccionado = CPNAleatorias[indiceAleatorio];                               // Se almace el dato de plato aleatorio seleccionado  
-        comidasPrimerosNiños[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;     // Al índice vacío de la matriz CPN se le asigna como valor el .nombre del plato aleatorio
-        if(platoSeleccionado[Object.keys(platoSeleccionado)].para === 'Todos'){                 // Si la propiedad .para del objeto platoSeleccionado es igual a 'Todos'
-          comidasPrimerosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;    // A la matriz CPD se le asigna el valor del .nombre en el mismo índice
+    for(let i = 0; i < comidasPrimerosNiños.length; i++) {                                      
+      if(comidasPrimerosNiños[i] === undefined) {                                              
+        const indiceAleatorio = Math.floor(Math.random() * CPNAleatorias.length);               
+        const platoSeleccionado = CPNAleatorias[indiceAleatorio];                               
+        comidasPrimerosNiños[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;  
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].plato === 'Plato único'){
+          filaComidasPrimerosNiños[i].setAttribute('rowspan', '2');
+          filaComidasSegundosNiños[i].remove();
+        }   
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].para === 'Todos'){                 
+          comidasPrimerosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
+          if(platoSeleccionado[Object.keys(platoSeleccionado)].plato === 'Plato único') {
+            filaComidasPrimerosDaia[i].setAttribute('rowspan', '2');
+            filaComidasSegundosDaia[i].remove();
+          }
         }
-        CPNAleatorias.splice(indiceAleatorio, 1);                                               // Se elimina el objeto de la matriz CPNAleatorias
+        CPNAleatorias.splice(indiceAleatorio, 1);                                               
       }
     }
   
@@ -90,15 +98,16 @@
         && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Comida');
     });
 
-    const CPDAleatoriasNombres = CPDAleatorias.map(registro => {
-      return registro[Object.keys(registro)].nombre;
-    });
-
     for(let i = 0; i < comidasPrimerosDaia.length; i++) {
       if(comidasPrimerosDaia[i] === undefined) {
-        const indiceAleatorio = Math.floor(Math.random() * CPDAleatoriasNombres.length);
-        comidasPrimerosDaia[i] = CPDAleatoriasNombres[indiceAleatorio];
-        CPDAleatoriasNombres.splice(indiceAleatorio, 1);
+        const indiceAleatorio = Math.floor(Math.random() * CPDAleatorias.length);
+        const platoSeleccionado = CPDAleatorias[indiceAleatorio];
+        comidasPrimerosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].plato === 'Plato único'){
+          filaComidasPrimerosDaia[i].setAttribute('rowspan', '2');
+          filaComidasSegundosDaia[i].remove();
+        }
+        CPDAleatorias.splice(indiceAleatorio, 1);
       }
     }
 
@@ -130,15 +139,12 @@
         && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Comida');
     });
 
-    const CSDAleatoriasNombres = CSDAleatorias.map(registro => {
-      return registro[Object.keys(registro)].nombre;
-    });
-
     for(let i = 0; i < comidasSegundosDaia.length; i++) {
       if(comidasSegundosDaia[i] === undefined) {
-        const indiceAleatorio = Math.floor(Math.random() * CSDAleatoriasNombres.length);
-        comidasSegundosDaia[i] = CSDAleatoriasNombres[indiceAleatorio];
-        CSDAleatoriasNombres.splice(indiceAleatorio, 1);
+        const indiceAleatorio = Math.floor(Math.random() * CSDAleatorias.length);
+        const platoSeleccionado = CPSAleatorias[indiceAleatorio];
+        comidasSegundosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
+        CSDAleatorias.splice(indiceAleatorio, 1);
       }
     }
 
@@ -150,17 +156,21 @@
         && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
     });
 
-    const CePNAleatoriasNombres = CePNAleatorias.map(registro => {
-      return registro[Object.keys(registro)].nombre;
-    });
-
     for(let i = 0; i < cenasPrimerosNiños.length; i++) {                                      
-      if(cenasPrimerosNiños[i] === undefined) {                                             
+      if(cenasPrimerosNiños[i] === undefined) {                                              
         const indiceAleatorio = Math.floor(Math.random() * CePNAleatorias.length);               
-        const platoSeleccionado = CePNAleatorias[indiceAleatorio];                              
-        cenasPrimerosNiños[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;     
+        const platoSeleccionado = CePNAleatorias[indiceAleatorio];                               
+        cenasPrimerosNiños[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;  
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].plato === 'Plato único'){
+          filaCenasPrimerosNiños[i].setAttribute('rowspan', '2');
+          filaCenasSegundosNiños[i].remove();
+        }   
         if(platoSeleccionado[Object.keys(platoSeleccionado)].para === 'Todos'){                 
-          cenasPrimerosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;    
+          cenasPrimerosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
+          if(platoSeleccionado[Object.keys(platoSeleccionado)].plato === 'Plato único') {
+            filaCenasPrimerosDaia[i].setAttribute('rowspan', '2');
+            filaCenasSegundosDaia[i].remove();
+          }
         }
         CePNAleatorias.splice(indiceAleatorio, 1);                                               
       }
@@ -174,28 +184,25 @@
         && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
     });
 
-    const CePDAleatoriasNombres = CePDAleatorias.map(registro => {
-      return registro[Object.keys(registro)].nombre;
-    });
-
     for(let i = 0; i < cenasPrimerosDaia.length; i++) {
       if(cenasPrimerosDaia[i] === undefined) {
-        const indiceAleatorio = Math.floor(Math.random() * CePDAleatoriasNombres.length);
-        cenasPrimerosDaia[i] = CePDAleatoriasNombres[indiceAleatorio];
-        CePDAleatoriasNombres.splice(indiceAleatorio, 1);
+        const indiceAleatorio = Math.floor(Math.random() * CePDAleatorias.length);
+        const platoSeleccionado = CePDAleatorias[indiceAleatorio];
+        cenasPrimerosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].plato === 'Plato único'){
+          filaCenasPrimerosDaia[i].setAttribute('rowspan', '2');
+          filaCenasSegundosDaia[i].remove();
+        }
+        CePDAleatorias.splice(indiceAleatorio, 1);
       }
     }
 
     //CENAS SEGUNDOS NIÑOS
 
     const CeSNAleatorias = datosBBDD.registros.filter(registro => {
-      return (registro[Object.keys(registro)].plato === 'Segundo' || registro[Object.keys(registro)].plato === 'Plato único')
+      return registro[Object.keys(registro)].plato === 'Segundo'
         && (registro[Object.keys(registro)].para === 'Marc & Paul' || registro[Object.keys(registro)].para === 'Todos')
         && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
-    });
-
-    const CeSNAleatoriasNombres = CeSNAleatorias.map(registro => {
-      return registro[Object.keys(registro)].nombre;
     });
 
     for(let i = 0; i < cenasSegundosNiños.length; i++) {                                      
@@ -213,7 +220,7 @@
     //CENAS SEGUNDOS DAIA
 
     const CeSDAleatorias = datosBBDD.registros.filter(registro => {
-      return (registro[Object.keys(registro)].plato === 'Segundo' || registro[Object.keys(registro)].plato === 'Plato único')
+      return registro[Object.keys(registro)].plato === 'Segundo'
         && (registro[Object.keys(registro)].para === 'Todos' || registro[Object.keys(registro)].para === 'Amaia & David')
         && (registro[Object.keys(registro)].coc === 'Comida o cena' || registro[Object.keys(registro)].coc === 'Cena');
     });
@@ -224,9 +231,10 @@
 
     for(let i = 0; i < cenasSegundosDaia.length; i++) {
       if(cenasSegundosDaia[i] === undefined) {
-        const indiceAleatorio = Math.floor(Math.random() * CeSDAleatoriasNombres.length);
-        cenasSegundosDaia[i] = CeSDAleatoriasNombres[indiceAleatorio];
-        CeSDAleatoriasNombres.splice(indiceAleatorio, 1);
+        const indiceAleatorio = Math.floor(Math.random() * CeSDAleatorias.length);
+        const platoSeleccionado = CeSDAleatorias[indiceAleatorio];
+        cenasSegundosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
+        CeSDAleatorias.splice(indiceAleatorio, 1);
       }
     }
    
