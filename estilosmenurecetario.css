@@ -60,7 +60,8 @@ th, td {
 .celda-sin-colores {
     background-color: transparent !important;
     border: none !important;
-    font-size: 49px;
+    font-size: 35px;
     text-align: center;
-    padding: 0;
+    padding: 20px;
+    width: 40px;
 }

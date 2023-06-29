@@ -70,6 +70,65 @@
       comidasSegundosDaia[6] = 'Se come fuera';
     }
 
+    // RESTRICCIÓN 3: VERDURA
+
+    let numVerdura = 0;
+
+    const restVerduraX2 = document.querySelector('#verd-opt1');
+    const restVerduraX3 = document.querySelector('#verd-opt2');
+    const restVerduraX4 = document.querySelector('#verd-opt3');
+    const restVerduraX5 = document.querySelector('#verd-opt4');
+
+    if(restVerduraX2.classList.contains('seleccionado')) {
+      numVerdura = 2;
+    } else if(restVerduraX3.classList.contains('seleccionado')) {
+      numVerdura = 3;
+    } else if(restVerduraX4.classList.contains('seleccionado')) {
+      numVerdura = 4;
+    } else if(restVerduraX5.classList.contains('seleccionado')) {
+      numVerdura = 5;
+    } else {
+      numVerdura = 0;
+    }
+
+    // RESTRICCIÓN 4: PESCADO
+
+    let numPescado = 0;
+
+    const restPescadoX1 = document.querySelector('#pesc-opt1');
+    const restPescadoX2 = document.querySelector('#pesc-opt2');
+    const restPescadoX3 = document.querySelector('#pesc-opt3');
+
+    if(restPescadoX1.classList.contains('seleccionado')) {
+      numPescado = 1;
+    } else if(restPescadoX2.classList.contains('seleccionado')) {
+      numPescado = 2;
+    } else if(restPescadoX3.classList.contains('seleccionado')) {
+      numPescado = 3;
+    } else {
+      numPescado = 0;
+    }
+
+    // RESTRICCIÓN 5: CARNE
+
+    let numCarne = 0;
+
+    const restCarneX5 = document.querySelector('#carne-opt1');
+    const restCarneX6 = document.querySelector('#carne-opt2');
+    const restCarneX7 = document.querySelector('#carne-opt3');
+
+    if(restCarneX5.classList.contains('seleccionado')) {
+      numCarne = 5;
+    } else if(restCarneX6.classList.contains('seleccionado')) {
+      numCarne = 6;
+    } else if(restCarneX7.classList.contains('seleccionado')) {
+      numCarne = 7;
+    } else {
+      numCarne = 0;
+    }
+
+    function completarMenu () {
+
     //COMIDAS PRIMEROS NIÑOS
 
     const CPNAleatorias = todosLosPlatos.filter(registro => {                             // se filtra el objeto regsitros del objeto BBDD
@@ -94,6 +153,15 @@
             filaComidasSegundosDaia[i].remove();
           }
         }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
+        }
         eliminarPlato(platoSeleccionado);
         CPNAleatorias.splice(indiceAleatorio, 1);                                               
       }
@@ -116,6 +184,15 @@
           filaComidasPrimerosDaia[i].setAttribute('rowspan', '2');
           filaComidasSegundosDaia[i].remove();
         }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
+        }
         eliminarPlato(platoSeleccionado);
         CPDAleatorias.splice(indiceAleatorio, 1);
       }
@@ -137,6 +214,15 @@
         if(platoSeleccionado[Object.keys(platoSeleccionado)].para === 'Todos'){                 
           comidasSegundosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;    
         }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
+        }
         eliminarPlato(platoSeleccionado);
         CSNAleatorias.splice(indiceAleatorio, 1);                                               
       }
@@ -157,6 +243,15 @@
         comidasSegundosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
         eliminarPlato(platoSeleccionado);
         CSDAleatorias.splice(indiceAleatorio, 1);
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
+        }
       }
     }
 
@@ -184,6 +279,15 @@
             filaCenasSegundosDaia[i].remove();
           }
         }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
+        }
         eliminarPlato(platoSeleccionado);
         CePNAleatorias.splice(indiceAleatorio, 1);                                               
       }
@@ -206,6 +310,15 @@
           filaCenasPrimerosDaia[i].setAttribute('rowspan', '2');
           filaCenasSegundosDaia[i].remove();
         }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
+        }
         eliminarPlato(platoSeleccionado);
         CePDAleatorias.splice(indiceAleatorio, 1);
       }
@@ -223,9 +336,18 @@
       if(cenasSegundosNiños[i] === undefined) {                                           
         let indiceAleatorio = Math.floor(Math.random() * CeSNAleatorias.length);               
         let platoSeleccionado = CeSNAleatorias[indiceAleatorio];                              
-        cenasSegundosNiños[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;     
+        cenasSegundosNiños[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
         if(platoSeleccionado[Object.keys(platoSeleccionado)].para === 'Todos'){                 
           cenasSegundosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;    
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
         }
         eliminarPlato(platoSeleccionado);
         CeSNAleatorias.splice(indiceAleatorio, 1);                                               
@@ -247,8 +369,37 @@
         cenasSegundosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
         CeSDAleatorias.splice(indiceAleatorio, 1);
         eliminarPlato(platoSeleccionado);
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Verdura') {
+          contVerduras++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Carne') {
+          contCarne++;
+        }
+        if(platoSeleccionado[Object.keys(platoSeleccionado)].tipo === 'Pescado') {
+          contPescado++;
+        }
       }
     }
+
+  }
+
+  completarMenu();
+
+  if(contVerduras < numVerdura && contCarne > numCarne && contPescado < numPescado) {
+    completarMenu();
+  }
+
+    // CONTADOR VERDURAS, CARNES Y PESCADOS
+
+    let contVerduras = 0;
+    let contCarne = 0;
+    let contPescado = 0;
+ 
+    console.log(`el total de verduras es ${contVerduras}`);
+    console.log(`el total de carnes es ${contCarne}`);
+    console.log(`el total de pescados es ${contPescado}`);
+
+    console.log(nuevoMenu);
    
 
     // VOLCAR MATRIZ EN TABLA

@@ -547,7 +547,7 @@ const datosBBDD = {
           id: '55',
           nombre: 'nuevo55',
           plato: 'Primero',
-          tipo: 'Pasta',
+          tipo: 'tbd',
           para: 'Amaia & David',
           coc: 'Comida o cena'
         }
@@ -557,7 +557,7 @@ const datosBBDD = {
           id: '56',
           nombre: 'nuevo56',
           plato: 'Primero',
-          tipo: 'Carne',
+          tipo: 'tbd',
           para: 'Todos',
           coc: 'Comida o cena'
         }
@@ -567,7 +567,7 @@ const datosBBDD = {
           id: '57',
           nombre: 'nuevo57',
           plato: 'Primero',
-          tipo: 'Verdura',
+          tipo: 'tbd',
           para: 'Amaia & David',
           coc: 'Comida o cena'
         }
@@ -577,7 +577,7 @@ const datosBBDD = {
           id: '58',
           nombre: 'nuevo58',
           plato: 'Segundo',
-          tipo: 'Pescado',
+          tipo: 'tbd',
           para: 'Marc & Paul',
           coc: 'Cena'
         }
@@ -587,7 +587,7 @@ const datosBBDD = {
           id: '59',
           nombre: 'nuevo59',
           plato: 'Primero',
-          tipo: 'Pasta',
+          tipo: 'tbd',
           para: 'Marc & Paul',
           coc: 'Comida o cena'
         }
@@ -597,7 +597,7 @@ const datosBBDD = {
           id: '60',
           nombre: 'nuevo60',
           plato: 'Primero',
-          tipo: 'Carne',
+          tipo: 'tbd',
           para: 'Todos',
           coc: 'Comida o cena'
         }
@@ -607,7 +607,7 @@ const datosBBDD = {
           id: '61',
           nombre: 'nuevo61',
           plato: 'Primero',
-          tipo: 'Verdura',
+          tipo: 'tbd',
           para: 'Amaia & David',
           coc: 'Comida o cena'
         }
@@ -617,7 +617,7 @@ const datosBBDD = {
           id: '62',
           nombre: 'nuevo62',
           plato: 'Segundo',
-          tipo: 'Pescado',
+          tipo: 'tbd',
           para: 'Marc & Paul',
           coc: 'Cena'
         }
@@ -627,7 +627,7 @@ const datosBBDD = {
           id: '63',
           nombre: 'nuevo63',
           plato: 'Primero',
-          tipo: 'Pasta',
+          tipo: 'tbd',
           para: 'Marc & Paul',
           coc: 'Comida o cena'
         }
@@ -637,7 +637,7 @@ const datosBBDD = {
           id: '64',
           nombre: 'nuevo64',
           plato: 'Primero',
-          tipo: 'Carne',
+          tipo: 'tbd',
           para: 'Todos',
           coc: 'Comida o cena'
         }
@@ -647,7 +647,7 @@ const datosBBDD = {
           id: '65',
           nombre: 'nuevo65',
           plato: 'Primero',
-          tipo: 'Verdura',
+          tipo: 'tbd',
           para: 'Amaia & David',
           coc: 'Comida o cena'
         }
@@ -657,7 +657,7 @@ const datosBBDD = {
           id: '66',
           nombre: 'nuevo66',
           plato: 'Segundo',
-          tipo: 'Pescado',
+          tipo: 'tbd',
           para: 'Marc & Paul',
           coc: 'Cena'
         }
@@ -667,7 +667,7 @@ const datosBBDD = {
           id: '67',
           nombre: 'nuevo67',
           plato: 'Primero',
-          tipo: 'Pasta',
+          tipo: 'tbd',
           para: 'Marc & Paul',
           coc: 'Comida o cena'
         }
