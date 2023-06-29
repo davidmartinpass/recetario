@@ -433,19 +433,19 @@ const datosBBDD = {
         }
       },
       {
-        nuevo44: {
+        salchichasPure: {
           id: '44',
-          nombre: 'nuevo44',
-          plato: 'Primero',
+          nombre: 'Salchichas con puré de patata',
+          plato: 'Plato único',
           tipo: 'Carne',
           para: 'Todos',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo45: {
+        coliflorBechamel: {
           id: '45',
-          nombre: 'nuevo45',
+          nombre: 'Coliflor con bechamel',
           plato: 'Primero',
           tipo: 'Verdura',
           para: 'Amaia & David',
@@ -453,92 +453,92 @@ const datosBBDD = {
         }
       },
       {
-        nuevo46: {
+        alubiasChorizo: {
           id: '46',
-          nombre: 'nuevo46',
-          plato: 'Segundo',
-          tipo: 'Pescado',
-          para: 'Marc & Paul',
-          coc: 'Comida o cena'
+          nombre: 'Alubis con chorizo TM',
+          plato: 'Primero',
+          tipo: 'Legumbre',
+          para: 'Todos',
+          coc: 'Comida'
         }
       },
       {
-        nuevo47: {
+        risottoParmesano: {
           id: '47',
-          nombre: 'nuevo47',
+          nombre: 'Risotto con parmesano TM',
           plato: 'Primero',
           tipo: 'Pasta',
-          para: 'Amaia & David',
+          para: 'Todos',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo48: {
+        quicheJamonQueso: {
           id: '48',
-          nombre: 'nuevo48',
-          plato: 'Primero',
-          tipo: 'Carne',
-          para: 'Todos',
+          nombre: 'Quiche de jamón y queso',
+          plato: 'Segundo',
+          tipo: 'Masa',
+          para: 'Amaia & David',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo49: {
+        croquetas: {
           id: '49',
-          nombre: 'nuevo49',
+          nombre: 'Croquetas',
           plato: 'Primero',
-          tipo: 'Verdura',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        nuevo46: {
-          id: '50',
-          nombre: 'nuevo50',
-          plato: 'Segundo',
-          tipo: 'Pescado',
-          para: 'Marc & Paul',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        nuevo51: {
-          id: '51',
-          nombre: 'nuevo51',
-          plato: 'Primero',
-          tipo: 'Pasta',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        nuevo52: {
-          id: '52',
-          nombre: 'nuevo52',
-          plato: 'Primero',
-          tipo: 'Carne',
+          tipo: 'Fritos',
           para: 'Todos',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo53: {
-          id: '53',
-          nombre: 'nuevo53',
-          plato: 'Primero',
-          tipo: 'Verdura',
+        ensaladaPastaPesto: {
+          id: '50',
+          nombre: 'Ensalada de pasta con pesto',
+          plato: 'Plato único',
+          tipo: 'Ensalada',
           para: 'Amaia & David',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo54: {
-          id: '54',
-          nombre: 'nuevo54',
+        tortillaPatata: {
+          id: '51',
+          nombre: 'Tortilla de patata',
           plato: 'Segundo',
+          tipo: 'Huevo',
+          para: 'Todos',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        gulas: {
+          id: '52',
+          nombre: 'Gulas',
+          plato: 'Primero',
           tipo: 'Pescado',
-          para: 'Marc & Paul',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        sopaPescado: {
+          id: '53',
+          nombre: 'Sopa de pescado TM',
+          plato: 'Primero',
+          tipo: 'Pescado',
+          para: 'Todos',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        sanJacobo: {
+          id: '54',
+          nombre: 'San Jacobos',
+          plato: 'Segundo',
+          tipo: 'Fritos',
+          para: 'Todos',
           coc: 'Comida o cena'
         }
       },

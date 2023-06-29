@@ -3,7 +3,7 @@ main {
 	background-size: cover;
 	background-position: right center;
 	background-attachment: fixed;
-    height: 95vh;
+    height: calc(100vh - 90px - 50px);
     margin-top: 90px;
     margin-bottom: 50px;
     overflow-x: hidden;
