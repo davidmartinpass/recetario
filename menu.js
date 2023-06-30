@@ -439,4 +439,7 @@
     console.log(todosLosPlatos);
   }
   
-  crearMenu();
+  const botonCrearMenu = document.querySelector('#crearMenu');
+  botonCrearMenu.onclick = function() {
+    crearMenu;
+  }
