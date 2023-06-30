@@ -81,13 +81,32 @@ nav {
     font-weight: bold;
 }
 
-#crearMenu {
-	font-size: 18px;
+aside {
+    border: none !important;
+}
+
+.botonFuncional {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
     cursor: pointer;
     background-color: #f1f1f1;
-    border: solid 1px #f1f1f1;
 	color: rgba(0, 0, 0, 0.925);
-	border-radius: 5px;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#crearMenu {
+    width: 100%;
+}
+
+#cambiarCondiciones {
+    width: 0%;
+}
+
+.botonFuncional:hover {
+    background-color: red;
 }
 
 /*FOOTER*/
