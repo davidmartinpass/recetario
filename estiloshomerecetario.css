@@ -7,7 +7,7 @@ main {
 	background-size: cover;
 	background-position: right center;
 	background-attachment: fixed;
-    height: calc(100vh - 90px - 50px);
+    height: calc(100vh - 90px);
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -23,9 +23,7 @@ main {
 	display: -webkit-flex; 																							/* Los navegadores basados en WebKit, como Chrome o Safari, a menudo requieren el prefijo "-webkit-" para ciertas propiedades CSS para garantizar la compatibilidad con versiones anteriores*/
 	display: flex;
 	overflow: hidden;
-	@media screen and (max-width: 768px) {																			/*Los elementos pasan de organizarse REVISAR*/
-		flex-direction: column;
-	}
+	height: calc(100vh - 90px - 50px - 50px);
 }
 
 .bloque-condiciones {
@@ -176,7 +174,8 @@ th, td {
     display: none;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
+	margin-top: 90px;
 }
 
 .celda-cab-menu {
