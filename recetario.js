@@ -2,13 +2,15 @@
 
 function openNav() {
 
-    document.querySelector("nav").style.width = "250px";													//Establece la anchura del menú hamburguesa: de 0 a 250px
-  }
+  document.querySelector("nav").style.width = "250px";													//Establece la anchura del menú hamburguesa: de 0 a 250px
+  document.querySelector('nav').style.overflowY = 'hidden';
+}
   
-  function closeNav() {
+function closeNav() {
 
-    document.querySelector("nav").style.width = "0";														//Establece la anchura del menú hamburguesa: de 250 a 0px
-  }
+  document.querySelector("nav").style.width = "0";														//Establece la anchura del menú hamburguesa: de 250 a 0px
+  document.querySelector('nav').style.overflowY = 'hidden';
+}
 
 //-------------------------------------------------------------------------MAIN---------------------------------------------------------------------------------------
 
@@ -46,6 +48,13 @@ opciones.forEach(opcion => {
   });
 });
 
+//-----------------------------------------------------------------------------AVISO-----------------------------------------------------------------------------------
+
+function openAviso() {
+
+  document.querySelector("#aviso-condiciones").style.display = "flex";
+}
+
 //---------------------------------------------------------------------------CREAR MENÚ--------------------------------------------------------------------------------
 
 let originalTabla = document.querySelector('#tablaMenu');
@@ -56,6 +65,12 @@ function restaurarTabla() {
     originalTabla.innerHTML = originalTablaHTML;
 
 }
+
+  // CONTADOR DE TIPOS
+
+  let contVerduras = 0;
+  let contCarne = 0;
+  let contPescado = 0;
 
   // FUNCIÓN PARA CREAR MENÚ
   
@@ -72,6 +87,8 @@ function restaurarTabla() {
     const cenasPrimerosDaia = Array(7);
     const cenasSegundosDaia = Array(7);
 
+    const menuFinal = [comidasPrimerosNiños, comidasSegundosNiños, comidasPrimerosDaia, comidasSegundosDaia, cenasPrimerosNiños, cenasSegundosNiños, cenasPrimerosDaia, cenasSegundosDaia]; 
+
     // FILAS DE LA TABLA DE MENÚS
     
     const filaComidasPrimerosNiños = document.querySelectorAll('.comida-primero-niños.añadir-valores');
@@ -83,42 +100,34 @@ function restaurarTabla() {
     const filaCenasPrimerosDaia = document.querySelectorAll('.cena-primero-daia.añadir-valores');
     const filaCenasSegundosDaia = document.querySelectorAll('.cena-segundo-daia.añadir-valores');
 
+    // FUNCIÓN PARA LIMPIAR LA TABLA
+
     function vaciarMenu() {
   
       for (let i = 0; i < filaComidasPrimerosNiños.length; i++) {
         filaComidasPrimerosNiños[i].innerHTML = '';
       }
-      console.log('borrado 1');
       for (let i = 0; i < filaComidasSegundosNiños.length; i++) {
         filaComidasSegundosNiños[i].innerHTML = '';
       }
-      console.log('borrado 2');
       for (let i = 0; i < filaComidasPrimerosDaia.length; i++) {
         filaComidasPrimerosDaia[i].innerHTML = '';
       }
-      console.log('borrado 3');
       for (let i = 0; i < filaComidasSegundosDaia.length; i++) {
         filaComidasSegundosDaia[i].innerHTML = '';
       }
-      console.log('borrado 4');
       for (let i = 0; i < filaCenasPrimerosNiños.length; i++) {
         filaCenasPrimerosNiños[i].innerHTML = '';
       }
-      console.log('borrado 5');
       for (let i = 0; i < filaCenasSegundosNiños.length; i++) {
         filaCenasSegundosNiños[i].innerHTML = '';
       }
-      console.log('borrado 6');
       for (let i = 0; i < filaCenasPrimerosDaia.length; i++) {
         filaCenasPrimerosDaia[i].innerHTML = '';
       }
-      console.log('borrado 7');
       for (let i = 0; i < filaCenasSegundosDaia.length; i++) {
         filaCenasSegundosDaia[i].innerHTML = '';
       }
-
-      console.log('borrado 8');
-      console.log('borrado realizado');
   
     }
 
@@ -135,10 +144,14 @@ function restaurarTabla() {
       }
     }
 
-
     // RESTRICCIÓN 1: SEMANA DE COLE, solo cenas
 
     let semanaCole = false;                                                                   // Restricción de semana de cole
+
+    const selecSemanaCole = document.querySelector('#hora-opt1');
+    if(selecSemanaCole.classList.contains('seleccionado')) {
+      semanaCole = true;
+    }
 
     if(semanaCole === true) {
       for(let i = 0; i < 5; i++) {
@@ -153,6 +166,11 @@ function restaurarTabla() {
 
     let sabadoComida = false;                                                                  // Restricción de sábado comida
 
+    const selecSabadoComida = document.querySelector('#hora-opt2');
+    if(selecSabadoComida.classList.contains('seleccionado')) {
+      sabadoComida = true;
+    }
+
     if(sabadoComida === true) {
       comidasPrimerosNiños[5] = 'Se come fuera';
       comidasSegundosNiños[5] = 'Se come fuera';
@@ -161,6 +179,11 @@ function restaurarTabla() {
     }
 
     let domingoComida = false;                                                                 // Restricción de domingo comida
+
+    const selecDomingoComida = document.querySelector('#hora-opt3');
+    if(selecDomingoComida.classList.contains('seleccionado')) {
+      domingoComida = true;
+    }
 
     if(domingoComida === true) {
       comidasPrimerosNiños[6] = 'Se come fuera';
@@ -210,7 +233,7 @@ function restaurarTabla() {
 
     // RESTRICCIÓN 5: CARNE
 
-    let numCarne = 0;
+    let numCarne = 10000;
 
     const restCarneX5 = document.querySelector('#carne-opt1');
     const restCarneX6 = document.querySelector('#carne-opt2');
@@ -223,16 +246,19 @@ function restaurarTabla() {
     } else if(restCarneX7.classList.contains('seleccionado')) {
       numCarne = 7;
     } else {
-      numCarne = 0;
-    }
-
-    let contVerduras = 0;
-    let contCarne = 0;
-    let contPescado = 0;
+      numCarne = 10000;
+    }   
 
     // FUNCIÓN COMPLETAR MENÚ
 
     function completarMenu() {
+
+      contVerduras = 0;
+      console.log(`Reinicializamos el contador de verduras a ${contVerduras}`);
+      contCarne = 0;
+      console.log(`Reinicializamos el contador de carnes a ${contCarne}`);
+      contPescado = 0;
+      console.log(`Reinicializamos el contador de pescados a ${contPescado}`);
       
       //COMIDAS PRIMEROS NIÑOS
 
@@ -461,7 +487,7 @@ function restaurarTabla() {
       });
 
       for (let i = 0; i < cenasSegundosDaia.length; i++) {
-        if (cenasSegundosDaia[i] === undefined || cenasSegundosDaia[i] === 'undefined') {
+        if (cenasSegundosDaia[i] === undefined || cenasSegundosDaia[i] === '') {
           let indiceAleatorio = Math.floor(Math.random() * CeSDAleatorias.length);
           let platoSeleccionado = CeSDAleatorias[indiceAleatorio];
           cenasSegundosDaia[i] = platoSeleccionado[Object.keys(platoSeleccionado)].nombre;
@@ -478,56 +504,56 @@ function restaurarTabla() {
           }
         }
       }
+      console.log(`el mínimo de verduras es ${numVerdura}`);
+      console.log(`el máximo de carnes es ${numCarne}`);
+      console.log(`el mínimo de pescados es ${numPescado}`);
+      console.log(`el total de verduras es ${contVerduras}`);
+      console.log(`el total de carnes es ${contCarne}`);
+      console.log(`el total de pescados es ${contPescado}`);
+      console.log(menuFinal);
 
     }
 
     completarMenu();
-    console.log('Función completarMenu lanzada');
-
-  if(contVerduras < numVerdura && contCarne > numCarne && contPescado < numPescado) {
-    completarMenu();
-  }
-
-    // CONTADOR VERDURAS, CARNES Y PESCADOS
- 
-    console.log(`el total de verduras es ${contVerduras}`);
-    console.log(`el total de carnes es ${contCarne}`);
-    console.log(`el total de pescados es ${contPescado}`); 
-
-    // VOLCAR MATRIZ EN TABLA
-
-    for(let z = 0; z < comidasPrimerosNiños.length; z++) {                                    // Vuelca la fila de comidasPrimerosNiños
-      filaComidasPrimerosNiños[z].innerHTML = comidasPrimerosNiños[z];
+    
+    if (contVerduras < numVerdura || contCarne > numCarne || contPescado < numPescado) {
+      openAviso();
     }
 
-    for(let z = 0; z < comidasSegundosNiños.length; z++) {                                    // Vuelca la fila de comidasSegundosNiños
-      filaComidasSegundosNiños[z].innerHTML = comidasSegundosNiños[z];
-    }
+      // VOLCAR MATRIZ EN TABLA
 
-    for(let z = 0; z < comidasPrimerosDaia.length; z++) {                                    // Vuelca la fila de comidasPrimerosDaia
-      filaComidasPrimerosDaia[z].innerHTML = comidasPrimerosDaia[z];
-    }
+      for(let z = 0; z < comidasPrimerosNiños.length; z++) {                                    // Vuelca la fila de comidasPrimerosNiños
+        filaComidasPrimerosNiños[z].innerHTML = comidasPrimerosNiños[z];
+      }
 
-    for(let z = 0; z < comidasSegundosDaia.length; z++) {                                    // Vuelca la fila de comidasSegundosDaia
-      filaComidasSegundosDaia[z].innerHTML = comidasSegundosDaia[z];
-    }
+      for(let z = 0; z < comidasSegundosNiños.length; z++) {                                    // Vuelca la fila de comidasSegundosNiños
+        filaComidasSegundosNiños[z].innerHTML = comidasSegundosNiños[z];
+      }
 
-    for(let z = 0; z < cenasPrimerosNiños.length; z++) {                                    // Vuelca la fila de cenasPrimerosNiños
-      filaCenasPrimerosNiños[z].innerHTML = cenasPrimerosNiños[z];
-    }
+      for(let z = 0; z < comidasPrimerosDaia.length; z++) {                                    // Vuelca la fila de comidasPrimerosDaia
+        filaComidasPrimerosDaia[z].innerHTML = comidasPrimerosDaia[z];
+      }
 
-    for(let z = 0; z < cenasSegundosNiños.length; z++) {                                    // Vuelca la fila de cenasSegundosNiños
-      filaCenasSegundosNiños[z].innerHTML = cenasSegundosNiños[z];
-    }
+      for(let z = 0; z < comidasSegundosDaia.length; z++) {                                    // Vuelca la fila de comidasSegundosDaia
+        filaComidasSegundosDaia[z].innerHTML = comidasSegundosDaia[z];
+      }
 
-    for(let z = 0; z < cenasPrimerosDaia.length; z++) {                                    // Vuelca la fila de cenasPrimerosDaia
-      filaCenasPrimerosDaia[z].innerHTML = cenasPrimerosDaia[z];
-    }
+      for(let z = 0; z < cenasPrimerosNiños.length; z++) {                                    // Vuelca la fila de cenasPrimerosNiños
+        filaCenasPrimerosNiños[z].innerHTML = cenasPrimerosNiños[z];
+      }
 
-    for(let z = 0; z < cenasSegundosDaia.length; z++) {                                    // Vuelca la fila de cenasSegundosDaia
-      filaCenasSegundosDaia[z].innerHTML = cenasSegundosDaia[z];
-    }
+      for(let z = 0; z < cenasSegundosNiños.length; z++) {                                    // Vuelca la fila de cenasSegundosNiños
+        filaCenasSegundosNiños[z].innerHTML = cenasSegundosNiños[z];
+      }
 
+      for(let z = 0; z < cenasPrimerosDaia.length; z++) {                                    // Vuelca la fila de cenasPrimerosDaia
+        filaCenasPrimerosDaia[z].innerHTML = cenasPrimerosDaia[z];
+      }
+
+      for(let z = 0; z < cenasSegundosDaia.length; z++) {                                    // Vuelca la fila de cenasSegundosDaia
+        filaCenasSegundosDaia[z].innerHTML = cenasSegundosDaia[z];
+      }
+    
     console.log('Función crearMenu lanzada');
   
   }

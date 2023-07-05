@@ -36,16 +36,16 @@ h1 {
 
 nav {
 
-    height: 250px;
+    height: 180px;
     width: 0; 																										/* 0 width - change this with JavaScript */
     position: fixed; 																								/* Stay in place */
     z-index: 1; 																									/* Stay on top */
     top: 0;																											/*Posición fija arriba del todo*/
     right: 0;																										/*Posición fija a la derecha del todo*/
-    background-color: #111;
+    background-color: #f1f1f1;
     overflow-x: hidden; 																							/* Disable horizontal scroll */
     padding-top: 20px; 																								/* Place content 60px from the top */
-    transition: 0.5s; 																							/* 0.5 second transition effect cuando cambie de estado */
+    transition: 0.1s; 																							    /* 0.5 second transition effect cuando cambie de estado */
 }
 
 .nav-link {
@@ -53,9 +53,9 @@ nav {
     padding: 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: white;
+    color: rgba(0, 0, 0, 0.925);
     display: block;
-    transition: 0.3s;																								/* 0.3 second transition effect, de arriba a abajo */
+    transition: 0.1s;																								/* 0.3 second transition effect, de arriba a abajo */
 }
 
 .closebtn {

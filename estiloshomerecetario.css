@@ -82,7 +82,7 @@ main {
 	margin: auto;
 	text-align: center;
 	transform: rotate(90deg);																						/*Por defecto muestra el título del bloque rotado*/
-	top: 25%;
+	top: 30%;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
@@ -128,6 +128,9 @@ main {
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
 }
 
@@ -176,6 +179,7 @@ th, td {
     align-items: center;
     padding: 5px;
 	margin-top: 90px;
+	flex-wrap: wrap;
 }
 
 .celda-cab-menu {
@@ -206,4 +210,12 @@ th, td {
     text-align: center;
     padding: 20px;
     width: 40px;
+}
+
+#aviso-condiciones {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	color: #f1f1f1;
+	margin: 20px auto;
 }
