@@ -1,3 +1,17 @@
+//-------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------
+
+function openNav() {
+
+  document.querySelector("nav").style.width = "250px";													//Establece la anchura del menú hamburguesa: de 0 a 250px
+  document.querySelector('nav').style.overflowY = 'hidden';
+}
+  
+function closeNav() {
+
+  document.querySelector("nav").style.width = "0";														//Establece la anchura del menú hamburguesa: de 250 a 0px
+  document.querySelector('nav').style.overflowY = 'hidden';
+}
+
 //--------------------------------------------------------------CARGA BBDD--------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function cargaBBDD() {            //Crea una función que se dispara cuando se carga el DOM
