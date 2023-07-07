@@ -581,3 +581,25 @@ function restaurarTabla() {
     divCondiciones.style.display = 'flex';
     divTablaMenu.style.display = 'none';
   }
+
+  // FUNCIÓN CREAR PDF
+
+  // Importa las bibliotecas jsPDF y html2canvas
+  
+  function crearPDF() {
+    // Selecciona el div con id 'tabla-menu'
+    var div = document.querySelector('#tabla-menu');
+
+    // Captura el contenido HTML del div con html2canvas
+    html2canvas(div).then(function(canvas) {
+      // Crea una nueva instancia de jsPDF
+      var doc = new jsPDF();
+
+      // Añade la imagen capturada al documento
+      doc.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0);
+
+      // Guarda el PDF
+      doc.save('tabla-menu.pdf');
+    });
+  }
+  
