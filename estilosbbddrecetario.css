@@ -169,3 +169,23 @@ th, td {
     width: 9em;
     border: #f1f1f1 solid 1px;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+    /* Estilos para pantallas de hasta 767px de ancho */
+}
+
+  /* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para pantallas entre 768px y 991px de ancho */
+}
+
+  /* Estilos para pantallas grandes (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Estilos para pantallas entre 992px y 1199px de ancho */
+}
+
+  /* Estilos para pantallas extra grandes (grandes pantallas de escritorio) */
+@media (min-width: 1200px) {
+    /* Estilos para pantallas de 1200px o más de ancho */
+}

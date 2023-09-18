@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.925);
+    background-color: rgba(199, 209, 177, 0.925);
 	margin: 0;
 	padding: 0;
 }
@@ -18,8 +18,8 @@ header {
     left: 0;
     height: 90px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.925);
-    color: #f1f1f1;
+    background-color: rgba(199, 209, 177, 0.925);
+    color: #0a0a0a;
     z-index: 9999;
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ nav {
 
     padding: 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.5em;
     color: rgba(0, 0, 0, 0.925);
     display: block;
     transition: 0.1s;																								/* 0.3 second transition effect, de arriba a abajo */
@@ -70,13 +70,13 @@ nav {
     background-color: transparent;
     padding: 30px;
     border: none;
-	color: #f1f1f1;
+	color: #0a0a0a;
 	display: flex;
 	align-items: center;
     position: fixed;
     right: 0;
 }
-  
+
 .openbtn:hover {
     font-weight: bold;
 }
@@ -108,12 +108,12 @@ aside {
     z-index: -1;
     background-color: rgb(255, 251, 0);
     transition: all 0.5s ease;
-  }
+}
 
-  #crearMenu:hover:after {
+#crearMenu:hover:after {
     left: 0;
     width: 100%;
-  }
+}
 
 #cambiarCondiciones:after {
     position: absolute;
@@ -125,12 +125,12 @@ aside {
     z-index: -1;
     background-color: rgb(255, 251, 0);
     transition: all 0.5s ease;
-  }
+}
 
-  #cambiarCondiciones:hover:after {
+#cambiarCondiciones:hover:after {
     right: 0;
     width: 50%;
-  }
+}
 
 #crearMenu {
     width: 100%;
@@ -143,14 +143,14 @@ aside {
 
 /*FOOTER*/
 footer {
-	background-color: rgba(0, 0, 0, 0.925);
+	background-color: rgba(199, 209, 177, 0.925);
 	position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
 	bottom: 0%;
 	height: 50px;
-	color: #f1f1f1;
+	color: #0a0a0a;
 	font-size: 18px;
 	width: 100%;
 }

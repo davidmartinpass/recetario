@@ -38,38 +38,37 @@ main {
 	-o-transition: all 800ms ease;
 	transition: all 800ms ease;																						/*Todas las transiciones se daran en 0.5s*/
 	@media screen and (max-width: 768px) {																			/*Para pantallas de menos de 769px evita que haya scroll horizontal*/
-		overflow: auto;
-		overflow-x: hidden;
+		overflow: hidden;
 	}
 }
 
 .bloque-condiciones:hover {
 	-webkit-flex-grow: 3;							
-	flex-grow: 3;																									/*El bloque de condiciones crecerá 3 veces más que el resto*/
+	flex-grow: 3;																								/*El bloque de condiciones crecerá 3 veces más que el resto*/
 }
 
 #verduras {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Verduras\ 1.png);
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Verduras\ 2.png);
 	background-size: contain;																						/*La imagen se escalará proporcionalmente hasta cubrir todo el elemento*/
 	background-position: left center;																				/*La imagen se colocará en el centro del eje vertical y del eje horizontal*/
 	background-attachment: fixed;																					/*la imagen permanecerá fija aunque se desplace el contenido*/
 }
 
 #pescado {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Pescado\ 1.png);
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Pescado\ 2.png);
 	background-size: contain;
 	background-position: center center;
 	background-attachment: fixed;
 }
 
 #horarios {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Horarios\ 1.png);
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Horarios\ 2.png);
 	background-size: contain;
 	background-position: right center;
 	background-attachment: fixed;
 }
 #carne {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Carne\ 2.png);
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Imágenes/Carne\ 3.png);
 	background-size: contain;
 	background-position: center center;
 	background-attachment: fixed;
@@ -78,7 +77,7 @@ main {
 .titulo-condiciones {
 	color: #f1f1f1;
 	position: relative;
-	font-size: 5vw;
+	font-size: 1.7em;
 	margin: auto;
 	text-align: center;
 	transform: rotate(90deg);																						/*Por defecto muestra el título del bloque rotado*/
@@ -88,9 +87,7 @@ main {
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;																						/*Las transiciones se realizarán en 0.5s con aceleración y desaceleración gradual*/
-	@media screen and (max-width: 768px) {
-		transform: rotate(0deg) !important;																			/*Con prioridad, para tamaños menores a 769px no se rotará el título*/			
-	}
+	
 }
 
 .seleccion {
@@ -116,7 +113,7 @@ main {
 
 	border-radius: 5px;
 	position: relative;
-	font-size: 1.5vw;
+	font-size: 1.5em;
 	height: 30px;
 	padding: 5px;
 	margin: 10px;
@@ -218,4 +215,31 @@ th, td {
 	align-items: center;
 	color: #f1f1f1;
 	margin: 20px auto;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+    .titulo-condiciones {
+		font-size: 1.2em;
+	}
+
+	.opcion {
+		font-size: 1em;
+		
+	}
+}
+
+  /* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para pantallas entre 768px y 991px de ancho */
+}
+
+  /* Estilos para pantallas grandes (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Estilos para pantallas entre 992px y 1199px de ancho */
+}
+
+  /* Estilos para pantallas extra grandes (grandes pantallas de escritorio) */
+@media (min-width: 1200px) {
+    /* Estilos para pantallas de 1200px o más de ancho */
 }
