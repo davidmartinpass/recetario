@@ -55,6 +55,11 @@ function openAviso() {
   document.querySelector("#aviso-condiciones").style.display = "flex";
 }
 
+function closeAviso() {
+
+  document.querySelector("#aviso-condiciones").style.display = "none";
+}
+
 //---------------------------------------------------------------------------CREAR MENÚ--------------------------------------------------------------------------------
 
 let originalTabla = document.querySelector('#tablaMenu');
@@ -518,6 +523,8 @@ function restaurarTabla() {
     
     if (contVerduras < numVerdura || contCarne > numCarne || contPescado < numPescado) {
       openAviso();
+    } else {
+      closeAviso();
     }
 
       // VOLCAR MATRIZ EN TABLA
