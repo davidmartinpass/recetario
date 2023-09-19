@@ -16,7 +16,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 90px;
+    height: 100px;
     width: 100%;
     background-color: rgba(199, 209, 177, 0.925);
     color: #0a0a0a;
@@ -98,6 +98,10 @@ aside {
     z-index: 1;
 }
 
+#crearMenu:hover {
+    color: #f1f1f1;
+}
+
 #crearMenu:after {
     position: absolute;
     content: "";
@@ -106,7 +110,7 @@ aside {
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: rgb(255, 251, 0);
+    background-color: rgba(75, 78, 66, 0.925);
     transition: all 0.5s ease;
 }
 
@@ -123,13 +127,17 @@ aside {
     top: 0;
     right: 0%;
     z-index: -1;
-    background-color: rgb(255, 251, 0);
+    background-color: rgba(75, 78, 66, 0.925);
     transition: all 0.5s ease;
 }
 
 #cambiarCondiciones:hover:after {
     right: 0;
     width: 50%;
+}
+
+#cambiarCondiciones:hover {
+    color: #f1f1f1;
 }
 
 #crearMenu {

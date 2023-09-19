@@ -3,6 +3,7 @@ main {
 	background-size: cover;
 	background-position: right center;
 	background-attachment: fixed;
+    margin-top: 100px;
     height: 100vh;
     overflow-x: hidden;
 }
@@ -45,7 +46,8 @@ th, td {
 }
 
 #nueva {
-    display: flex;
+    display: none;
+    /*display: flex;*/
     height: 150px;
     width: 100%;
     justify-content: center;

@@ -4,10 +4,11 @@
 
 main {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(./Imágenes/fondo\ opacity.jpg);
+	/*background-color: rgba(75, 78, 66, 0.925);*/
 	background-size: cover;
 	background-position: right center;
 	background-attachment: fixed;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 100px);
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -182,7 +183,7 @@ th, td {
 .celda-cab-menu {
     line-height: 3em;
     align-self: center;
-    width: auto;
+
     padding-left: 1em;
     padding-right: 1em;
     background-color: rgb(76, 72, 72);
@@ -227,11 +228,18 @@ th, td {
 		font-size: 1em;
 		
 	}
+
+	th, td {
+		font-size: 0.8em;
+	}
 }
 
   /* Estilos para pantallas medianas (tabletas) */
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Estilos para pantallas entre 768px y 991px de ancho */
+
+    th, td {
+		font-size: 0.9em;
+	}
 }
 
   /* Estilos para pantallas grandes (desktops) */

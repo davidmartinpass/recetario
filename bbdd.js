@@ -455,7 +455,7 @@
       {
         alubiasChorizo: {
           id: '46',
-          nombre: 'Alubis con chorizo TM',
+          nombre: 'Alubias con chorizo TM',
           plato: 'Primero',
           tipo: 'Legumbre',
           para: 'Todos',
@@ -543,132 +543,132 @@
         }
       },
       {
-        nuevo55: {
+        muslosPolloFA: {
           id: '55',
-          nombre: 'nuevo55',
-          plato: 'Primero',
-          tipo: 'tbd',
-          para: 'Amaia & David',
+          nombre: 'Muslos de pollo FA',
+          plato: 'Segundo',
+          tipo: 'Carne',
+          para: 'Todos',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo56: {
+        nuggetsPolloFA: {
           id: '56',
-          nombre: 'nuevo56',
-          plato: 'Primero',
-          tipo: 'tbd',
+          nombre: 'Nuggets de pollo FA',
+          plato: 'Segundo',
+          tipo: 'Carne',
           para: 'Todos',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo57: {
+        empanadillasCarneFA: {
           id: '57',
-          nombre: 'nuevo57',
-          plato: 'Primero',
-          tipo: 'tbd',
+          nombre: 'Empanadillas de carne FA',
+          plato: 'Segundo',
+          tipo: 'Fritos',
           para: 'Amaia & David',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo58: {
+        empanadillasAtunFA: {
           id: '58',
-          nombre: 'nuevo58',
+          nombre: 'Empanadillas de atún FA',
           plato: 'Segundo',
-          tipo: 'tbd',
-          para: 'Marc & Paul',
-          coc: 'Cena'
+          tipo: 'Fritos',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
         }
       },
       {
-        nuevo59: {
+        solomilloPatatas: {
           id: '59',
-          nombre: 'nuevo59',
-          plato: 'Primero',
-          tipo: 'tbd',
-          para: 'Marc & Paul',
+          nombre: 'Solomillo con patatas',
+          plato: 'Planto único',
+          tipo: 'Carne',
+          para: 'Todos',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo60: {
+        fishChips: {
           id: '60',
-          nombre: 'nuevo60',
-          plato: 'Primero',
-          tipo: 'tbd',
+          nombre: 'Fish & Chips FA',
+          plato: 'Plato único',
+          tipo: 'Pescado',
           para: 'Todos',
-          coc: 'Comida o cena'
+          coc: 'Cena'
         }
       },
       {
-        nuevo61: {
+        rollitosPrimavera: {
           id: '61',
-          nombre: 'nuevo61',
-          plato: 'Primero',
-          tipo: 'tbd',
+          nombre: 'Rollitos de primavera',
+          plato: 'Segundo',
+          tipo: 'Fritos',
           para: 'Amaia & David',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo62: {
+        calamaresFA: {
           id: '62',
-          nombre: 'nuevo62',
-          plato: 'Segundo',
-          tipo: 'tbd',
-          para: 'Marc & Paul',
-          coc: 'Cena'
-        }
-      },
-      {
-        nuevo63: {
-          id: '63',
-          nombre: 'nuevo63',
+          nombre: 'Calamares FA',
           plato: 'Primero',
-          tipo: 'tbd',
-          para: 'Marc & Paul',
+          tipo: 'Fritos',
+          para: 'Amaia & David',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo64: {
-          id: '64',
-          nombre: 'nuevo64',
+        arosCebollaFA: {
+          id: '63',
+          nombre: 'Aros de cebolla FA',
           plato: 'Primero',
-          tipo: 'tbd',
+          tipo: 'Fritos',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        tempuraVerdurasFA: {
+          id: '64',
+          nombre: 'Tempura de verduras FA',
+          plato: 'Segundo',
+          tipo: 'Verdura',
+          para: 'Amaia & David',
+          coc: 'Comida o cena'
+        }
+      },
+      {
+        bocadilloLomo: {
+          id: '65',
+          nombre: 'Bocadillo de Lomo',
+          plato: 'Plato único',
+          tipo: 'Carne',
+          para: 'Amaia & David',
+          coc: 'Cena'
+        }
+      },
+      {
+        sanJacobosPatatasFA: {
+          id: '66',
+          nombre: 'San Jacobos con patatas FA',
+          plato: 'Segundo',
+          tipo: 'Fritos',
           para: 'Todos',
           coc: 'Comida o cena'
         }
       },
       {
-        nuevo65: {
-          id: '65',
-          nombre: 'nuevo65',
-          plato: 'Primero',
-          tipo: 'tbd',
-          para: 'Amaia & David',
-          coc: 'Comida o cena'
-        }
-      },
-      {
-        nuevo66: {
-          id: '66',
-          nombre: 'nuevo66',
-          plato: 'Segundo',
-          tipo: 'tbd',
-          para: 'Marc & Paul',
-          coc: 'Cena'
-        }
-      },
-      {
-        nuevo67: {
+        hamburguesaPatatas: {
           id: '67',
-          nombre: 'nuevo67',
-          plato: 'Primero',
-          tipo: 'tbd',
-          para: 'Marc & Paul',
+          nombre: 'Hamburguesa con patatas',
+          plato: 'Segundo',
+          tipo: 'Carne',
+          para: 'Todos',
           coc: 'Comida o cena'
         }
       }
