@@ -580,6 +580,10 @@ function restaurarTabla() {
     botonCrearMenu.style.width = '50%';
     divCondiciones.style.display = 'none';
     divTablaMenu.style.display = 'flex';
+
+    gtag('event', 'crear_menu', {                                                             //Google Analytics: Evento Crear Menú
+      'parametro1': 'valorprueba1'
+    });
   }
 
   botonCambiarCondiciones.onclick = function() {
